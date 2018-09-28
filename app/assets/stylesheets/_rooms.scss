@@ -1,0 +1,114 @@
+header{
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid #e5e5e5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  font-weight: 600;
+  z-index: 1;
+  @include clearfix;
+  .logo{
+    float: left;
+    max-height: 80px;
+    padding: 15px;
+   }
+  .search{
+    float:left;
+    height: 100%;
+    line-height: 80px;
+    input{
+      width: 460px;
+      height: 60%;
+    }
+  }
+  .nav{
+    float: right;
+    font-size: 14px;
+    ul{
+      @include clearfix;
+      padding-right: 10px;
+      .block{
+        float: left;
+        line-height: 80px;
+        padding: 0 8px;
+        display: block;
+      }
+    }
+  }
+}
+
+.warapper{
+  padding: 0 80px 48px;
+  margin-top: 90px;
+  .side{
+    width: 25%;
+    height: 100vh;
+    float: left;
+    padding: 24px 20px 0 0;
+    .search__box{
+      border-top: 1px solid #e5e5e5;
+      padding: 10px 0 15px;
+      p{
+        color: #c0c0c0;
+      }
+      input:not(.checkbox){
+        width: 90%;
+        height: 40px;
+        text-align: center
+        }
+        .serch__box-room{
+          width: 100%;
+          @include clearfix;
+          padding: 5px;
+          .search__box-room-select{
+            float: left;
+            input.checkbox{
+              height: 18px;
+              width: 18px;
+            }
+          }
+          .search__box-room-content{
+            float: left;
+            padding-left: 10px;
+            h5{
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  .main{
+    width: 75%;
+    float: left;
+    .sub{
+      font-size: 25px;
+      font-weight: bold;
+    }
+    .lists{
+      .room{
+        padding: 8px 8px 12px;
+        &__image{
+          max-width: 100%;
+          height: auto;
+        }
+        &__detail{
+          display: block;
+          text-decoration: none;
+          padding-top: 8px;
+          font-size: 10px;
+          &-tag{
+            font-weight: bold;
+          }
+          &-title{
+            font-weight: bold;
+          }
+          &-detail{
+            font-color: #d3d3d3;
+          }
+        }
+      }
+    }
+  }
+}

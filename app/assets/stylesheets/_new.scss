@@ -1,0 +1,124 @@
+.pageheader__host_new{
+  position:fixed;
+  width:100%;
+  height:100px;
+  &--top{
+    height:64px;
+    background:#ffffff;
+    border-bottom:1px solid #DCDCDC;
+    width:100%;
+  &--icon{
+    height:40px;
+    width:40px;
+    margin:12px 0 0 20px;
+    float:left;
+  }
+  &--user_icon{
+    height:40px;
+    width:40px;
+    float:right;
+    margin:12px 20px 0 0;
+  }
+  }
+  &__lists{
+    height:40px;
+    width:100%;
+    border-bottom:3px green solid;
+    &--list{
+      background:#f8f8f8;
+      height:40px;
+      width:16.64%;
+      float:left;
+      border-right:0.04px solid gray;
+      &--font{
+        font-weight:bold;
+        font-size:14px;
+        margin-left:14px;
+        line-height:2.6;
+      }
+    }
+  }
+}
+.pagebody__host__basic{
+  background:#f8f8f8;
+  height:100%;
+  width:100vw;
+  overflow:scroll;
+  padding:114px 0 0 0;
+  &__leftcontent{
+    background:white;
+    min-height:850px;
+    min-width:580px;
+    width:56.4vw;
+    &--form{
+      float:right;
+      max-height:654px;
+      max-width:520px;
+      &--top{
+        width:520px;
+        min-height:654px;
+        margin-top:80px;
+        padding:0 0 100px 0;
+        &--propaty_question{
+          font-size:24px;
+          font-weight:bold;
+          color: #554f51;
+        }
+        &--propaty_questions{
+          margin:50px 0 0 0;
+          width:520px;
+          color:#A9A9A9;
+        }
+      }
+      &--bottom{
+        background:#ffffff;
+        position:fixed;
+        height:100px;
+        width:520px;
+        bottom:0;
+        border-top:1px solid #DCDCDC;
+        &--return{
+          width:80px;
+          height:50px;
+          background:#00737c;
+          float:left;
+          border-radius:5px;
+          margin:28px 18px 0 0;
+          .font{
+            text-align:center;
+            color:white;
+            margin:10px 0 0 0;
+          }
+        }
+        &--next{
+          width:80px;
+          height:50px;
+          background:#00737c;
+          float:right;
+          border-radius:5px;
+          margin:28px;
+          .font{
+            text-align:center;
+            color:white;
+            margin:10px 0 0 0;
+          }
+        }
+      }
+    }
+  }
+}
+.num{
+  width:400px;
+  height:20px;
+}
+.type_select{
+  margin:14px 0 0 0;
+  width:300px;
+  height:40px;
+  border:1px green solid;
+}
+.propaty_question--checkboxs{
+  width:150px;
+  height:540px;
+  margin:60px 0 0 0;
+}
