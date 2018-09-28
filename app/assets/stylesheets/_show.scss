@@ -1,0 +1,342 @@
+.show-content{
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  &__header{
+    width: 100%;
+    height: 60px;
+    margin: 0;
+  }
+  &__main{
+    width: 100%;
+    &-top{
+      width: 100%;
+      height: 100%;
+      .top-image{
+        width: 100%;
+        height: 650px;
+        position: relative;
+      }
+      .share{
+        position: absolute;
+        top: 75px;
+        right: 120px;
+      }
+      .keep{
+        position: absolute;
+        top: 75px;
+        right: 30px;
+      }
+      .display{
+        position: absolute;
+        bottom: 320px;
+        left: 30px;
+      }
+    }
+    &-body{
+      max-width: 70%;
+      margin: 0 15%;
+      height: 100%;
+      &__left-content{
+        width: 50%;
+        height: 100%;
+        float: left;
+        padding-top: 20px;
+        &-top{
+          width: 100%;
+          margin-top: 5px;
+          &__title{
+            font-size: 15px;
+            font-weight: bold;
+          }
+          &__main{
+            font-size: 25px;
+            font-weight: bold;
+          }
+          .icon-image{
+            width: 80px;
+            height: 80px;
+            border-radius: 160px;
+            float: right;
+          }
+          &__area{
+            font-size: 15px;
+          }
+          &__condition{
+            font-size: 19px;
+            padding-top: 5px;
+          }
+        }
+        &-point{
+          border: 1px solid #EBEBEB;
+          border-radius: 4px;
+          box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.05);
+          padding: 20px;
+          margin-top: 10px;
+          &__title{
+            font-size: 15px;
+          }
+          &__body{
+            font-size: 18px;
+            padding-top: 8px;
+          }
+          &__action{
+            font-size: 16px;
+            padding-top: 8px;
+          }
+        }
+        &-deteil{
+          font-size: 19px;
+          padding-top: 5px;
+          padding-bottom: 10px;
+          color: #484848;
+        }
+        &-amenities{
+          border-top: 1px solid #EBEBEB;
+          .title{
+            font-size: 18px;
+          }
+          &-items{
+            font-size: 18px;
+          }
+        }
+        &-bed{
+          font-size: 18px;
+          padding-top: 10px;
+          font-weight: bold;
+          position: relative;
+          height: auto;
+          border-top: 1px solid #EBEBEB;
+          margin-top: 15px;
+          padding-bottom: 10px;
+          &-left{
+            border: 1px solid #EBEBEB;
+            box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.05);
+            height: 150px;
+            width: 147px;
+            float: left;
+            position: absolute;
+            top: 50px;
+            white-space: pre;
+            font-weight: normal;
+          }
+          &-right{
+            border: 1px solid #EBEBEB;
+            box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.05);
+            height: 150px;
+            width: 147px;
+            position: absolute;
+            left: 150px;
+            top: 50px;
+            white-space: pre;
+            font-weight: normal;
+          }
+        }
+        &-reservation{
+          margin-top: 200px;
+          font-size: 18px;
+          border-top: 1px solid #EBEBEB;
+          &-title{
+            font-weight: bold;
+            padding-top: 10px;
+          }
+          &-update{
+            padding-top: 10px;
+          }
+          &-calendar{
+            .calendar-image{
+              height: 300px;
+              width: 600px;
+            }
+          }
+        }
+        &-review{
+          margin-top: 23px;
+          padding-top: 15px;
+          border-top: 1px solid #EBEBEB;
+          &-title{
+            font-weight: bold;
+            font-size: 26px;
+          }
+          &-body{
+            padding-top: 20px;
+            padding-bottom: 10px;
+            font-size: 18px;
+          }
+          .review-button{
+            border: 0.5px solid black;
+            border-radius: 4px;
+          }
+        }
+        &-host{
+          margin-top: 20px;
+          &-title{
+            font-weight: bold;
+            font-size: 26px;
+          }
+          &-sub{
+            font-size: 18px;
+            padding-top: 10px;
+          }
+          &-num{
+            font-size: 18px;
+            padding-top: 10px;
+          }
+          &-reply-rate{
+            font-size: 18px;
+            padding-top: 10px;
+          }
+          &-reply-time{
+            font-size: 18px;
+            padding-top: 5px;
+          }
+          .host-communication{
+            border: 1px solid green;
+            color: green;
+            margin-top: 10px;
+            border-radius: 4px;
+          }
+        }
+        &-caution{
+          font-size: 18px;
+          margin-top: 15px;
+          border-top: 1px solid #EBEBEB;
+          padding-top: 15px;
+          padding-bottom: 10px;
+        }
+        &-area{
+          font-weight: bold;
+          border-top: 1px solid #EBEBEB;
+          margin-top: 10px;
+          padding-top: 15px;
+          font-size: 26px;
+          margin-bottom: 10px;
+          &-title{
+            font-size: 18px;
+            font-weight: normal;
+          }
+          &-sub{
+            font-size: 18px;
+            font-weight: normal;
+            padding-top: 12px;
+          }
+          &-body{
+            font-size: 18px;
+            font-weight: normal;
+            padding-top: 12px;
+            color: #484848;
+            &-action{
+              color: green;
+              padding-top: 15px;
+              padding-bottom: 15px;
+            }
+          }
+          &-map{
+            font-size: 18px;
+            font-weight: normal;
+            .map-image{
+              height: 300px;
+              weight: 650px;
+            }
+          }
+        }
+        &-rule{
+          font-weight: bold;
+          border-top: 1px solid #EBEBEB;
+          margin-top: 10px;
+          padding-top: 10px;
+          font-size: 26px;
+          margin-left: 15px;
+          &-title{
+            font-weight: 800;
+            font-size: 18px;
+            padding-top: 15px;
+          }
+          &-body{
+            font-weight: normal;
+            font-size: 18px;
+            white-space: pre;
+          }
+          &-action{
+            font-weight: normal;
+            color: green;
+            font-size: 18px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+          }
+        }
+        &-cancel{
+          font-size: 18px;
+          border-top: 1px solid #EBEBEB;
+          border-bottom: 1px solid #EBEBEB;
+          padding-top: 15px;
+          &-title{
+            font-weight: 400;
+          }
+          &-body{
+            padding-top: 18px;
+            white-space: pre;
+          }
+          &-action{
+            color: green;
+            padding-top: 15px;
+            padding-bottom: 15px;
+          }
+        }
+      }
+      &__right-content{
+        width: 45%;
+        height: 100%;
+        float: right;
+        padding-top: 20px;
+        padding-left: 30px;
+        &-tool{
+          border: 1px solid #EBEBEB;
+          box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.05);
+          font-size: 23px;
+          float: left;
+          height: 400px;
+          padding: 20px;
+          width: 400px;
+          &-price{
+            margin-top: 20px;
+            margin-bottom: 30px;
+            font-size: 20px;
+          }
+          &-date{
+            margin-top: 20px;
+            border-top: 1px solid #EBEBEB;
+            font-size: 20px;
+            padding-top: 15px;
+          }
+          &-number{
+            font-size: 20px;
+            margin-top: 15px;
+          }
+          &-caution{
+            color: red;
+            font-size: 15px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+          }
+          input{
+            width: 80%;
+            margin-right: 10%;
+            margin-left: 10%;
+          }
+          .check{
+            background-color: #FF5A5F;
+            color: #ffffff;
+            width: 80%;
+            margin: 15px 10%
+          }
+        }
+      }
+    }
+  }
+}
