@@ -15,10 +15,10 @@ https://gyazo.com/6cadcc8460d2d58d95496ce726a95cd3
 |birthday-month|integer|null:false
 |birthday-day|integer|null:false
 |gender|integer|null:false
-|language|integer|null:false
-|currency|integer|null:false
-|address|string|null:false
-|introduction|string|null:false
+|language|integer|
+|currency|integer|
+|address|string|
+|introduction|string|
 |guest_id|integer|null:false
 |host_id|integer|
 
@@ -37,13 +37,22 @@ has_many :reservations
 |prefecture|text|null:false
 |city|text|null:false
 |address|text|null:false
-|must-item|integer|
+|image|string|
+|subject|text|null:false
+|title|text|null:false
+|price|integer|null:false
+|currency|integer|null:false
+|filter_id|integer|foreign_key: true|
+|amenity_id|integer|foreign_key: true|
+|rule_id|integer|foreign_key: true|
 
 ### association
 ```
 has_many :reviews
 has_many :reservations
-has_many :filters
+belongs_to :filter
+belongs_to :amenity
+belongs_to :rule
 ```
 
 ## Filter
@@ -52,6 +61,15 @@ has_many :filters
 |capacity|integer|null:false
 |bedroom-counter|integer|null:false
 |bathroom-counter|float|null:false
+|must-item|integer|
+|room_id|integer|foreign_key: true|
+
+### association
+```
+has_many :rooms
+```
+
+## Amenity
 |wifi|integer|
 |shampoo|integer|
 |closet|integer|
@@ -61,11 +79,14 @@ has_many :filters
 |breakfast|integer|
 |pet|integer|
 |iron|integer|
-|image|string|
-|subject|text|null:false
-|title|text|null:false
-|price|integer|null:false
-|currency|integer|null:false
+|room_id|integer|foreign_key: true|
+
+### association
+```
+has_many :rooms
+```
+
+## Rule
 |rule-pet|integer|
 |rule-smoking|integer|
 |rule-party|integer|
@@ -76,10 +97,11 @@ has_many :filters
 |prior-sharespace|integer|
 |prior-security|integer|
 |prior-guns|integer|
+|room_id|integer|foreign_key: true|
 
 ### association
 ```
-belongs_to :room
+has_many :rooms
 ```
 
 ## reservations
