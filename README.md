@@ -2,7 +2,7 @@
 
 * Database creation
 
-https://gyazo.com/b3c05d597d8d1342cf47ab04b04f7a20
+https://gyazo.com/6cadcc8460d2d58d95496ce726a95cd3
 
 ## User
 |Column|Type|Options|
@@ -19,28 +19,39 @@ https://gyazo.com/b3c05d597d8d1342cf47ab04b04f7a20
 |currency|integer|null:false
 |address|string|null:false
 |introduction|string|null:false
+|guest_id|integer|null:false
+|host_id|integer|
 
 ### association
 ```
-has_many   :rooms
-has_many   :reservations
+has_many :rooms
+has_many :reservations
 ```
 
 ## Room
 |Column|Type|Options|
 |------|----|-------|
 |host_id|integer|null:false
-|category|integer|null:false
-|room-type|integer|null:false
-|capacity|integer|null:false
-|bedroom-counter|integer|null:false
-|bathroom-counter|float|null:false
 |location|integer|null:false
 |post-number|text|null:false
 |prefecture|text|null:false
 |city|text|null:false
 |address|text|null:false
 |must-item|integer|
+
+### association
+```
+has_many :reviews
+has_many :reservations
+has_many :filters
+```
+
+## Filter
+|category|integer|null:false
+|room-type|integer|null:false
+|capacity|integer|null:false
+|bedroom-counter|integer|null:false
+|bathroom-counter|float|null:false
 |wifi|integer|
 |shampoo|integer|
 |closet|integer|
@@ -68,8 +79,7 @@ has_many   :reservations
 
 ### association
 ```
-has_many :reviews
-has_many :reservations
+belongs_to :room
 ```
 
 ## reservations
@@ -77,7 +87,7 @@ has_many :reservations
 |------|----|-------|
 |check-in|date|
 |check-out|date|
-|price|integer|
+|price_per_night|integer|
 |user_id|references|null: false, foreign_key: true|
 |room_id|references|null: false, foreign_key: true|
 
