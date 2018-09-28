@@ -1,0 +1,99 @@
+.contents-category {
+      width: 100%;
+      padding: 34px 80px;
+      &__title {
+        h2 {
+          font-weight: 700;
+          margin-bottom: 0px;
+          font-size: 24px;
+          line-height: 30px;
+          letter-spacing: normal;
+          font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+          text-transform: undefined;
+          color: #484848;
+          padding-top: 2px;
+          padding-bottom: 2px;
+        }
+      }
+      &__frame {
+        margin: 20px 0;
+        &--box {
+          float: left;
+          background-color: transparent;
+          border: 1px solid rgba(0,0,0,0.1);
+          border-radius: 3px;
+          box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.06);
+          margin-right: 10px;
+          border-radius: 6px;
+          overflow: hidden;
+          text-align: left;
+          width: 30%;
+          .cate-image {
+            float: left;
+            img {
+              width: 96px;
+              height: 72px;
+            }
+          }
+          .cate-txt {
+            float: left;
+            font-size: 16px;
+            font-weight:bold;
+            color: #484848;
+            padding: 0 20px 0;
+            line-height: 72px;
+          }
+        }
+      }
+    @media (min-width: 1000px) {
+      &__frame {
+        &--box {
+          width: 33%;
+          max-width: 250px;
+        }
+      }
+
+    }
+}
+
+.contents-world {
+    width: 100%;
+    padding: 16px 80px;
+    &__title {
+        h2 {
+            font-weight: 700;
+            margin-bottom: 0px;
+            font-size: 24px;
+            line-height: 30px;
+            letter-spacing: normal;
+            font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+            text-transform: undefined;
+            color: #484848;
+            padding-top: 2px;
+            padding-bottom: 2px;
+        }
+    }
+    .room{
+      padding: 8px 0 12px;
+      &__image{
+        max-width: 100%;
+        height: auto;
+      }
+      &__detail{
+        display: block;
+        text-decoration: none;
+        padding-top: 8px;
+        font-size: 10px;
+        &-tag{
+          font-weight: bold;
+        }
+        &-title{
+          font-weight: bold;
+        }
+        &-detail{
+          font-color: #d3d3d3;
+        }
+      }
+    }
+}
+
