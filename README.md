@@ -2,7 +2,7 @@
 
 * Database creation
 
-https://gyazo.com/6cadcc8460d2d58d95496ce726a95cd3
+https://gyazo.com/47c942b6380e86dc227bbf87ec6cc561
 
 ## User
 |Column|Type|Options|
