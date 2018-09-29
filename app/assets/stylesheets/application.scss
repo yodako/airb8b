@@ -1,13 +1,16 @@
-@import "./reset";
-@import "./module";
-@import "./mixin";
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "./contents";
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
-@import "./rooms";
 @import "./index";
 @import "./index1";
+@import "./mixin";
+@import "./module";
 @import "./new";
-@import "./contents";
+@import "./reset";
+@import "./rooms";
 @import "./tests";
+
+
 
