@@ -1,0 +1,98 @@
+$light-gray: #DCDCDC;
+.pageheader__room_new{
+  position:fixed;
+  width:100%;
+  height:64px;
+  &--top{
+    height:64px;
+    background:#ffffff;
+    border-bottom:1px solid $light-gray;
+    width:100%;
+    &--icon{
+      height:40px;
+      width:40px;
+      margin:12px 0 0 20px;
+      float:left;
+    }
+    &--user_icon{
+      height:40px;
+      width:40px;
+      float:right;
+      margin:12px 20px 0 0;
+    }
+  }
+}
+.pagebody__room__basic{
+  background:#f8f8f8;
+  width:100vw;
+  overflow:scroll;
+  padding:64px 0 0 0;
+  &__leftcontent{
+    background:white;
+    height:5130px;
+    min-width:580px;
+    width:56.4vw;
+    &--form{
+      float:right;
+      max-height:654px;
+      max-width:520px;
+      &--top{
+        width:520px;
+        min-height:654px;
+        margin-top:80px;
+        padding:0 0 100px 0;
+        &--propaty_question{
+          font-size:24px;
+          font-weight:bold;
+          color: #554f51;
+        }
+        &--propaty_questions{
+          margin:50px 0 0 0;
+          width:520px;
+          color:#808080;
+          font-weight:bold;
+          &--main{
+            color:#333333;
+            font-weight:bold;
+          }
+          &--sub{
+            color:#777777;
+            font-size:16px;
+          }
+        }
+      }
+      &--bottom{
+        background:#ffffff;
+        height:100px;
+        width:520px;
+        border-top:1px solid $light-gray;
+        &--return{
+          width:80px;
+          height:50px;
+          background:#00737c;
+          float:left;
+          border-radius:5px;
+          margin:28px 18px 0 0;
+          .font{
+            text-align:center;
+            color:white;
+            margin:10px 0 0 0;
+          }
+        }
+        &--next{
+          width:80px;
+          height:54px;
+          background:#00737c;
+          float:right;
+          border-radius:5px;
+          margin:28px;
+          text-align:center;
+          color:white;
+          margin:30px 30px 0 0;
+          font-weight:bold;
+        }
+      }
+    }
+  }
+}
+
