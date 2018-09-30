@@ -1,9 +1,4 @@
 class RoomsController < ApplicationController
-<<<<<<< HEAD
-  def show
-  end
-=======
-
 
   def new_introduction
   end
@@ -25,5 +20,4 @@ class RoomsController < ApplicationController
     params.require(:room).permit(:kind,:note,:ki,:no)
   end
 
->>>>>>> fujimasa1031/master
 end
