@@ -134,6 +134,28 @@ belongs_to :room
 belongs_to :user
 ```
 
+https://gyazo.com/7b82da4d9b52ae5664ac399985d22b50
+
+## inbox
+|Column|Type|Options|
+|------|----|-------|
+|reservation_id|references|null: false, foreign_key: true|
+
+## user-inbox
+|Column|Type|Options|
+|------|----|-------|
+|user_id|references|null: false, foreign_key: true|
+|inbox_id|references|null: false, foreign_key: true|
+
+##  message
+|Column|Type|Options|
+|------|----|-------|
+|body|string|
+|gest_id|references|null: false, foreign_key: true|
+|host_id|references|null: false, foreign_key: true|
+|inbox_id|references|null: false, foreign_key: true|
+
+
 * 実装予定機能
   - User登録/編集/削除
     - 認証登録(email/Google/Facebook)
