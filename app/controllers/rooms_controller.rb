@@ -1,10 +1,14 @@
 class RoomsController < ApplicationController
 
+
   def new_introduction
   end
 
-  def new 
+  def new
     @room  = Room.new
+  end
+
+  def show
   end
 
   def create
@@ -16,4 +20,5 @@ class RoomsController < ApplicationController
   def room_params
     params.require(:room).permit(:kind,:note,:ki,:no)
   end
+
 end
