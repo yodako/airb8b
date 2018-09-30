@@ -56,11 +56,11 @@ belongs_to :rule
 ```
 
 ## Filter
-|category|integer|null:false
-|room-type|integer|null:false
-|capacity|integer|null:false
-|bedroom-counter|integer|null:false
-|bathroom-counter|float|null:false
+|category|integer|null:false|
+|room-type|integer|null:false|
+|capacity|integer|null:false|
+|bedroom-counter|integer|null:false|
+|bathroom-counter|float|null:false|
 |must-item|integer|
 |room_id|integer|foreign_key: true|
 
