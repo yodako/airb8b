@@ -245,6 +245,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   erb2haml
+
   font-awesome-rails
   haml-rails
   jbuilder (~> 2.5)
