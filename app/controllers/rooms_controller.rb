@@ -1,6 +1,5 @@
 class RoomsController < ApplicationController
 
-
   def new_introduction
   end
 
