@@ -109,6 +109,7 @@ has_many :rooms
 |------|----|-------|
 |check-in|date|
 |check-out|date|
+|number|integer|
 |price_per_night|integer|
 |user_id|references|null: false, foreign_key: true|
 |room_id|references|null: false, foreign_key: true|
