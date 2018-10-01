@@ -7,4 +7,6 @@ class Room < ApplicationRecord
   accepts_nested_attributes_for :amenity
   accepts_nested_attributes_for :rule
   accepts_nested_attributes_for :filter
+
+  mount_uploader :image, ImageUploader
 end
