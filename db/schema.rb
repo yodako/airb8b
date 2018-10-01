@@ -75,6 +75,8 @@ ActiveRecord::Schema.define(version: 2018_09_30_070725) do
     t.integer "price", null: false
     t.integer "currency", null: false
     t.integer "rule_id"
+    t.integer "amenity_id"
+    t.integer "filter_id"
   end
 
   create_table "rules", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
