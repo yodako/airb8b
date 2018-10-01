@@ -74,6 +74,11 @@ ActiveRecord::Schema.define(version: 2018_09_30_070725) do
     t.text "title", null: false
     t.integer "price", null: false
     t.integer "currency", null: false
+<<<<<<< HEAD
+=======
+    t.integer "filter_id"
+    t.integer "amenity_id"
+>>>>>>> fujimasa1031/master
     t.integer "rule_id"
   end
 
@@ -92,6 +97,10 @@ ActiveRecord::Schema.define(version: 2018_09_30_070725) do
     t.datetime "updated_at", null: false
   end
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> fujimasa1031/master
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -116,6 +125,10 @@ ActiveRecord::Schema.define(version: 2018_09_30_070725) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> fujimasa1031/master
   add_foreign_key "reservations", "rooms"
   add_foreign_key "reservations", "users"
 end
