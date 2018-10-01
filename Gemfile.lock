@@ -245,7 +245,10 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   erb2haml
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6690d0d3589534d35dfc56983a0ce46588d02b61
   font-awesome-rails
   haml-rails
   jbuilder (~> 2.5)
