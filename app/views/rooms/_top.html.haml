@@ -1,0 +1,31 @@
+.top-image
+  %img{_pageexpand_: "416", alt: "ユニークな宿泊先や体験を予約しよう。", src: "/assets/top-img.jpg"}/
+.header
+  = render "header"
+
+.top-link
+  %p
+    登録300件超
+    %br>/
+    オレゴンのおもしろい家
+.top-message
+  %h2 ユニークな宿泊先や体験を予約しよう。
+.top-form
+  %h2 ユニークな宿泊先や体験を予約しよう。
+  .top-form__place
+    %span 場所
+    %input{ name: "query", placeholder: "どこでも", type: "text", value: ""}/
+  .top-form__box
+    .top-form__box--check
+      %span チェックイン
+      %input{ name: "checkin", placeholder: "yyyy/mm/dd", type: "text", value: ""}/
+    .top-form__box--check
+      %span チェックアウト
+      %input{ name: "checkout", placeholder: "yyyy/mm/dd", type: "text", value: ""}/
+  .top-form__persons
+    %span 人数
+    .top-form__persons--button
+    %button{type: "button"}
+      %span ゲスト1人
+  .top-form__button
+    %button{ type: "submit"} 探す
