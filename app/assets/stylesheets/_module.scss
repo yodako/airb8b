@@ -1,0 +1,189 @@
+.registration-view_icon{
+  height:32px;
+  float:left;
+  margin:5px 0 0 0;
+}
+.register--font{
+  &--step{
+    letter-spacing:-0.1em;
+  }
+  &--overview{
+    font-size:24px;
+    line-height:1.2;
+  }
+  &--etc{
+    line-height:1.2;
+  }
+}
+.button__registoration--green{
+  width:64px;
+  height:35px;
+  background:#00737c;
+  float:left;
+  border-radius:5px;
+  margin:18px 18px 0 0;
+  .font{
+    text-align:center;
+    color:white;
+    margin:10px 0 0 0;
+    font-size:14px;
+    line-height:1.0;
+  }
+}
+.img--registration{
+  width:32%;
+  height:auto;
+  float:right;
+  margin: calc(420px - 30%) 80px 0 0;
+}
+.descreption--field{
+  height:200px;
+  width:480px;
+}
+.listing_name-field{
+  height:60px;
+  width:480px;
+  border:1px black solid;
+  border-radius:6px;
+  outline: none;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.prior_char{
+  font-weight:bold;
+  color:#666666;
+  &--sub{
+    font-weight:bold;
+    color:#666666;
+    margin:0 0 0 20px;
+  }
+}
+.house_rule{
+  height:50px;
+  width:400px;
+  &_char{
+    float:left;
+    font-size:20px;
+    color:#444444;
+  }
+  &_buttons{
+    float:right;
+    margin:0 20px 0 0;
+  }
+}
+.space{
+  height:20px;
+  width:100vw;
+}
+.registration__check{
+  width:520px;
+}
+.smallfont{
+  font-size:14.6px;
+}
+.green_font{
+  color:green;
+}
+.registration__icons--type1{
+  height:140px;
+}
+.registration__icons--type2{
+  width:180px;
+}
+.registration__icons--type3{
+  width:160px;
+}
+.selectbox{
+  border:1px solid #DCDCDC;
+  width:300px;
+  height:40px;
+  border-radius:4px;
+  &--icon-angle-down{
+    color:gray;
+    float:right;
+    margin:4px 10px 0 0;
+  }
+  &--selecter{
+    width:250px;
+    height:40px;
+    border: none;
+    outline: none;
+    background: transparent;
+    background-image: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    appearance: none;
+    margin:0 0 0 10px;
+  }
+}
+.adderss_box{
+  height:50px;
+  width:200px;
+  outline: none;
+  background: transparent;
+  border:1px #DCDCDC solid;
+}
+
+.num{
+  width:400px;
+  height:20px;
+}
+.type_select{
+  margin:14px 0 0 0;
+  width:300px;
+  height:40px;
+  border:1px green solid;
+}
+.propaty_question--checkboxs{
+  width:150px;
+  &--box{
+    float:left;
+    margin:4px 0 0 0;
+  }
+  &--char{
+    color:gray;
+    margin:0 0 0 20px;
+  }
+}
+.file{
+  display:none;
+}
+.file_field{
+  width:500px;
+  height:300px;
+  border:3px $light-gray dashed;
+  border-radius:3px;
+  &--button{
+    height:66px;
+    width:250px;
+    background:#ff5d64;
+    margin:125px auto 0;
+    border-radius:6px;
+    &--font{
+      color:white;
+      font-weight:bold;
+      text-align:center;
+      line-height:4;
+    }
+  }
+}
+.numberbox{
+  border:1px solid #DCDCDC;
+  width:500px;
+  height:40px;
+  border-radius:4px;
+  &--selecter{
+    width:500px;
+    height:40px;
+    border: none;
+    outline: none;
+    background: transparent;
+    background-image: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    margin:0 0 0 10px;
+  }
+}
