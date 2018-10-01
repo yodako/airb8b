@@ -74,9 +74,9 @@ ActiveRecord::Schema.define(version: 2018_09_30_070725) do
     t.text "title", null: false
     t.integer "price", null: false
     t.integer "currency", null: false
-    t.integer "filter_id"
-    t.integer "amenity_id"
     t.integer "rule_id"
+    t.integer "amenity_id"
+    t.integer "filter_id"
   end
 
   create_table "rules", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -93,7 +93,6 @@ ActiveRecord::Schema.define(version: 2018_09_30_070725) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -118,7 +117,6 @@ ActiveRecord::Schema.define(version: 2018_09_30_070725) do
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
-
 
   add_foreign_key "reservations", "rooms"
   add_foreign_key "reservations", "users"
