@@ -1,5 +1,9 @@
 class RoomsController < ApplicationController
 
+  def index
+    @rooms = Room.all
+  end
+
   def new_introduction
   end
 
@@ -13,6 +17,9 @@ class RoomsController < ApplicationController
   def create
     Room.create(room_params)
     redirect_to action:new_introduction
+  end
+
+  def serch
   end
 
   private

@@ -3,9 +3,9 @@
     世界中のリスティング
 
 .rooms
-  = render "listing-thumb"
-  = render "listing-thumb"
-  = render "listing-thumb"
-  = render "listing-thumb"
+  - 3.times do |i|
+    = render partial: 'listing-thumb', collection: @rooms
+
+
 
 

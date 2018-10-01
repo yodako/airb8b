@@ -1,0 +1,216 @@
+%header
+  -# .header-logo
+  -#   = link_to image_tag "logo.png", class: "logo"
+  .search
+    .fas.fa-search
+    %input{class: ""}
+  .nav
+    %ul
+      %li.block
+        = link_to "ホストをはじめる"
+      %li.block
+        = link_to "お気に入り"
+      %li.block
+        = link_to "旅行"
+      %li.block
+        = link_to "メッセージ"
+      %li.block
+        = link_to "ヘルプ"
+      %li.block
+        = link_to "User"
+
+
+
+.warapper
+  .side.search__boxs
+    %h3 MORE FILTER
+    .search__box
+      .search__box-base
+        %h4 基本情報
+        .search__box-base--date
+          %p 日付
+          %input{placeholder: "チェックイン", class: "search__box-base--date-in"}
+          %input{placeholder: "チェックアウト", class: "search__box-base--date-out"}
+        .search__box-number
+          %p 人数
+          %input{type: "number", placeholder: "宿泊人数"}
+    .search__box
+      .search__box-price
+        %h4 価格帯
+        %input{type: "price", placeholder: "下限価格"}
+        %input{type: "price", placeholder: "上限価格"}
+    .search__box
+      .search__box-rooms
+      %h4 部屋タイプ
+
+      .serch__box-room
+        .search__box-room-select
+          %input.checkbox{type: "checkbox"}
+        .search__box-room-content
+          %h5 まるまる貸切/Reserved
+
+      .serch__box-room
+        .search__box-room-select
+          %input.checkbox{type: "checkbox"}
+        .search__box-room-content
+          %h5 個室/Private Room
+
+      .serch__box-room
+        .search__box-room-select
+          %input.checkbox{type: "checkbox"}
+        .search__box-room-content
+          %h5 シェアルーム/Shared Room
+
+    .search__box
+      %input{type: "button", value: "Search"}
+
+
+
+  .main
+    .rooms.container
+      .sub
+        %h3 xx件以上のお家
+      .lists.row
+        .room.col-sm-6.col-md-3
+          .image
+            = link_to image_tag "room2.png", class: "room__image"
+          .room__detail
+            = link_to do
+              .room__detail-tag
+                マンション・アパート貸切 · ベッド4台
+              .room__detail-title
+                J's APT 2 Bed Rooms + Free Portable Wi-Fi
+              .room__detail-detail
+                1泊あたり料金¥ 14,521· キャンセル無料
+              .room__detail-evaluation
+                ★★★ 222 ・スーパーホスト
+        .room.col-sm-6.col-md-3
+          .image
+            = link_to image_tag "room2.png", class: "room__image"
+          .room__detail
+            = link_to do
+              .room__detail-tag
+                マンション・アパート貸切 · ベッド4台
+              .room__detail-title
+                J's APT 2 Bed Rooms + Free Portable Wi-Fi
+              .room__detail-detail
+                1泊あたり料金¥ 14,521· キャンセル無料
+              .room__detail-evaluation
+                ★★★ 222 ・スーパーホスト
+        .room.col-sm-6.col-md-3
+          .image
+            = link_to image_tag "room2.png", class: "room__image"
+          .room__detail
+            = link_to do
+              .room__detail-tag
+                マンション・アパート貸切 · ベッド4台
+              .room__detail-title
+                J's APT 2 Bed Rooms + Free Portable Wi-Fi
+              .room__detail-detail
+                1泊あたり料金¥ 14,521· キャンセル無料
+              .room__detail-evaluation
+                ★★★ 222 ・スーパーホスト
+        .room.col-sm-6.col-md-3
+          .image
+            = link_to image_tag "room2.png", class: "room__image"
+          .room__detail
+            = link_to do
+              .room__detail-tag
+                マンション・アパート貸切 · ベッド4台
+              .room__detail-title
+                J's APT 2 Bed Rooms + Free Portable Wi-Fi
+              .room__detail-detail
+                1泊あたり料金¥ 14,521· キャンセル無料
+              .room__detail-evaluation
+                ★★★ 222 ・スーパーホスト
+        .room.col-sm-6.col-md-3
+          .image
+            = link_to image_tag "room2.png", class: "room__image"
+          .room__detail
+            = link_to do
+              .room__detail-tag
+                マンション・アパート貸切 · ベッド4台
+              .room__detail-title
+                J's APT 2 Bed Rooms + Free Portable Wi-Fi
+              .room__detail-detail
+                1泊あたり料金¥ 14,521· キャンセル無料
+              .room__detail-evaluation
+                ★★★ 222 ・スーパーホスト
+        .room.col-sm-6.col-md-3
+          .image
+            = link_to image_tag "room2.png", class: "room__image"
+          .room__detail
+            = link_to do
+              .room__detail-tag
+                マンション・アパート貸切 · ベッド4台
+              .room__detail-title
+                J's APT 2 Bed Rooms + Free Portable Wi-Fi
+              .room__detail-detail
+                1泊あたり料金¥ 14,521· キャンセル無料
+              .room__detail-evaluation
+                ★★★ 222 ・スーパーホスト
+        .room.col-sm-6.col-md-3
+          .image
+            = link_to image_tag "room2.png", class: "room__image"
+          .room__detail
+            = link_to do
+              .room__detail-tag
+                マンション・アパート貸切 · ベッド4台
+              .room__detail-title
+                J's APT 2 Bed Rooms + Free Portable Wi-Fi
+              .room__detail-detail
+                1泊あたり料金¥ 14,521· キャンセル無料
+              .room__detail-evaluation
+                ★★★ 222 ・スーパーホスト
+        .room.col-sm-6.col-md-3
+          .image
+            = link_to image_tag "room2.png", class: "room__image"
+          .room__detail
+            = link_to do
+              .room__detail-tag
+                マンション・アパート貸切 · ベッド4台
+              .room__detail-title
+                J's APT 2 Bed Rooms + Free Portable Wi-Fi
+              .room__detail-detail
+                1泊あたり料金¥ 14,521· キャンセル無料
+              .room__detail-evaluation
+                ★★★ 222 ・スーパーホスト
+        .room.col-sm-6.col-md-3
+          .image
+            = link_to image_tag "room2.png", class: "room__image"
+          .room__detail
+            = link_to do
+              .room__detail-tag
+                マンション・アパート貸切 · ベッド4台
+              .room__detail-title
+                J's APT 2 Bed Rooms + Free Portable Wi-Fi
+              .room__detail-detail
+                1泊あたり料金¥ 14,521· キャンセル無料
+              .room__detail-evaluation
+                ★★★ 222 ・スーパーホスト
+        .room.col-sm-6.col-md-3
+          .image
+            = link_to image_tag "room2.png", class: "room__image"
+          .room__detail
+            = link_to do
+              .room__detail-tag
+                マンション・アパート貸切 · ベッド4台
+              .room__detail-title
+                J's APT 2 Bed Rooms + Free Portable Wi-Fi
+              .room__detail-detail
+                1泊あたり料金¥ 14,521· キャンセル無料
+              .room__detail-evaluation
+                ★★★ 222 ・スーパーホスト
+        .room.col-sm-6.col-md-3
+          .image
+            = link_to image_tag "room2.png", class: "room__image"
+          .room__detail
+            = link_to do
+              .room__detail-tag
+                マンション・アパート貸切 · ベッド4台
+              .room__detail-title
+                J's APT 2 Bed Rooms + Free Portable Wi-Fi
+              .room__detail-detail
+                1泊あたり料金¥ 14,521· キャンセル無料
+              .room__detail-evaluation
+                ★★★ 222 ・スーパーホストs
