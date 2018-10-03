@@ -1,7 +1,8 @@
 class RoomsController < ApplicationController
 
   def index
-    @rooms = Room.all
+    @rooms_world = Room.all.limit(6)
+    @rooms_ny = Room.all.limit(6)
   end
 
   def new_introduction
