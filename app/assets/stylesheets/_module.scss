@@ -1,3 +1,7 @@
+$confirm-body-width:1120px;
+$confirm-left_side-width:620px;
+$confirm-left_side-contents-width:540px;
+$confirm-view-sentence-font:16px;
 .registration-view_icon{
   height:32px;
   float:left;
@@ -76,7 +80,6 @@
 }
 .space{
   height:20px;
-  width:100vw;
 }
 .registration__check{
   width:520px;
@@ -185,5 +188,59 @@
     box-shadow: none;
     -webkit-appearance: none;
     margin:0 0 0 10px;
+  }
+}
+
+.middle-space{
+  height:40px;
+}
+.mini-space{
+  height:10px;
+}
+.big-space{
+  height:80px;
+}
+.border--light_gray{
+  width:$confirm-left_side-contents-width;
+  border-bottom:solid 1px $light-gray;
+}
+.card-number_input_box{
+  height:40px;
+  width:440px;
+  outline: none;
+  background: transparent;
+  border:1px #DCDCDC solid;
+}
+.card_input_box{
+  height:40px;
+  width:220px;
+  outline: none;
+  background: transparent;
+  border:1px #DCDCDC solid;
+}
+.float-left{
+  float:left;
+}
+.reservation-view_icon{
+  margin:10px 0 0 10px;
+}
+.review-count--char{
+  font-size:10px;
+  font-weight:bold;
+}
+.confirm-view-middle-char{
+  font-weight:bold;
+}
+.confirm-view-small-char{
+  font-size:12px;
+}
+.credit-card__box{
+  &--head{
+    float:left;
+  }
+  &--images{
+    margin:0 0 0 190px;
+    width:180px;
+    float:left;
   }
 }

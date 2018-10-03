@@ -1,0 +1,244 @@
+.confirm-view__header{
+  min-width:1120px;
+  height:60px;
+}
+.confirm-view__body{
+  width:$confirm-body-width;
+  height:2100px;
+  margin: 0 auto;
+  &__reftside{
+    width:$confirm-left_side-width;
+    height:2100px;
+    float:left;
+    &__contents{
+      width:$confirm-left_side-contents-width;
+      height:600px;
+      float:right;
+      &--heading{
+        &_title{
+          font-size:28px;
+          font-weight:bold;
+        }
+        &_sentence{
+          font-size:14.4px;
+        }
+        &_subtitle{
+          font-size:$confirm-view-sentence-font;
+          font-weight:bold;
+        }
+        &__lists{
+          margin:16px 0 0 16px;
+          &__list{
+            list-style-type:disc;
+            font-size:$confirm-view-sentence-font;
+          }
+        }
+      }
+      &--message_containar{
+        width:540px;
+        height:200px;
+        position:relative;
+        &--body{
+          width:490px;
+          height:200px;
+          background:$light-gray;
+          border-radius:18px;
+          &--text{
+            padding:12px 0 0 14px;
+            line-height:1.4;
+            font-size:14.6px;
+          }
+          &--transration{
+            color:green;
+            line-height:3;
+            font-weight:bold;
+            margin:0 0 0 14px;
+          }
+        }
+        &--user_icon{
+          width:40px;
+          height:40px;
+          position:absolute;
+          bottom:0;
+          right:0;
+        }
+      }
+      &--message_to_host{
+        width:540px;
+        height:100px;
+        position:relative;
+      }
+      &--message_to_host::placeholder{
+        position:relative;
+        top:-2em;
+      }
+      &--pay-select{
+        width:470px;
+        height:40px;
+      }
+      &--credit_card_box{
+        width:220px;
+        height:100px;
+        float:left;
+        margin:0 30px 0 0;
+      }
+      &--card-information{
+        clear:both;
+        &--box{
+          float:left;
+          margin:0 30px 0 0;
+        }
+      }
+      &--policy{
+        clear:both;
+      }
+    }
+  }
+  &__rightside{
+    width:350px;
+    min-height:480px;
+    float:left;
+    margin:0 0 0 60px;
+    border:1px solid $light-gray;
+    &__box{
+      margin:20px auto 0;
+      width:320px;
+      min-height:440px;
+      &--content{
+        height:94px;
+        border-bottom:1px solid $light-gray;
+        &--days{
+          height:90px;
+          border-bottom:1px solid $light-gray;
+          &--box{
+            padding:10px 0 0 0;
+            &--guests{
+              &--image{
+                width:30px;
+                float:left;
+              }
+              &--count{
+                float:left;
+                font-size:$confirm-view-sentence-font;
+                margin:0 0 0 20px;
+              }
+            }
+            &--days{
+              clear:both;
+              margin:10px 0 0 0;
+              &--box{
+                margin:20px 0 0 30px;
+                &--checkin{
+                  float:left;
+                  font-size:$confirm-view-sentence-font;
+                  margin:0 0 0 20px;
+                }
+                &--arrow{
+                  float:left;
+                  font-size:18px;
+                  line-height:1.1;
+                }
+                &--checkout{
+                  float:left;
+                  font-size:$confirm-view-sentence-font;
+                }
+              }
+              &--image{
+                width:32px;
+                float:left;
+              }
+            }
+          }
+        }
+        &--cal{
+          min-height:88px;
+          border-bottom:1px solid $light-gray;
+          &--box{
+            &--multi{
+              font-size:$confirm-view-sentence-font;
+              float:left;
+            }
+            &--comp{
+              font-size:$confirm-view-sentence-font;
+              float:left;
+              margin:0 0 0 50px;
+            }
+            &--option{
+              font-size:$confirm-view-sentence-font;
+              clear:both;
+              float:left;
+            }
+            &--price{
+              font-size:$confirm-view-sentence-font;
+              float:left;
+              margin:0 0 0 104px;
+            }
+          }
+        }
+        &--sum{
+          clear:both;
+          height:68px;
+          border-bottom:1px solid $light-gray;
+          &--box{
+            &--head{
+              float:left;
+              font-size:$confirm-view-sentence-font;
+            }
+            &--price{
+              float:left;
+              font-size:$confirm-view-sentence-font;
+              margin:0 0 0 66px;
+            }
+          }
+        }
+        &--top{
+          float:left;
+          width:230px;
+          &--review-box{
+            &--review-image{
+            width:64px;
+            float:left;
+            margin:0 4px 0 0;
+            }
+          }
+          &--image{
+            width:90px;
+            float:left;
+          }
+        }
+        &--cansel-reverse{
+          margin:20px 0 0 0;
+          &--box{
+            float:left;
+            width:220px;
+            &--text{
+
+            }
+          }
+          &--image{
+            float:right;
+            width:58px;
+            margin:10px 0 0 0;
+          }
+        }
+      }
+    }
+  }
+}
+.confirm-view__footer{
+  margin:0 auto;
+  height:60px;
+  width:74vw;
+  border-top:1px solid $light-gray;
+  &--box{
+    margin:20px 0 0 0;
+    &--image{
+      width:16px;
+      float:left;
+    }
+    &--copyright{
+      margin:0 0 0 20px;
+      float:left;
+    }
+  }
+}
