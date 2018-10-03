@@ -1,8 +1,8 @@
 .room.col-sm-6.col-md-3
-  .room__image
-    %img{_pageexpand_: "416", alt: "", src: "#{room.image.url}"}
-  .room__detail
-    = link_to do
+  = link_to room_path("#{room.id}") do
+    .room__image
+      %img{_pageexpand_: "416", alt: "", src: "#{room.image.url}"}
+    .room__detail
       .room__detail-tag
         マンション・アパート
         #{room.filter.category}

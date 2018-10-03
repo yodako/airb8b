@@ -70,7 +70,6 @@
     .rooms.container
       .sub
         %h3 xx件以上のお家
-      -# .lists.row
       .rooms
         - @rooms.each do |room|
           = render partial: 'listing-thumb', locals: {room: room}
