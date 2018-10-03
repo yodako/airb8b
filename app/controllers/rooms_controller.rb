@@ -29,6 +29,7 @@ class RoomsController < ApplicationController
   end
 
   def serch
+    @rooms = Room.all
   end
 
   private
