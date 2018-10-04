@@ -44,8 +44,8 @@
         .show-content__main-body__left-content-amenities
           %h3.title アメニティ・設備
           .show-content__main-body__left-content-amenities-items
-            -if @room.amenity.wifi
-              = @room.amenity.wifi
+            -if @room.amenity.wifi == 1
+              %p wifi
             -if @room.amenity.shampoo
               = @room.amenity.shampoo
             -if @room.amenity.closet
@@ -121,10 +121,11 @@
                 handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
                   markers = handler.addMarkers([
                     {
-                      "lat": #{@room.latitude},
-                      "lng": #{@room.longitude},
+                      "lat": 35.2228,
+                      "lng": 138.682,
                       "infowindow": "ここだよーん"
                     }
+                    
                   ]);
                   handler.bounds.extendWith(markers);
                   handler.fitMapToBounds();
