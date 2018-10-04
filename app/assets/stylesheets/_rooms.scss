@@ -86,29 +86,5 @@ header{
       font-size: 25px;
       font-weight: bold;
     }
-    .lists{
-      .room{
-        padding: 8px 8px 12px;
-        &__image{
-          max-width: 100%;
-          height: auto;
-        }
-        &__detail{
-          display: block;
-          text-decoration: none;
-          padding-top: 8px;
-          font-size: 10px;
-          &-tag{
-            font-weight: bold;
-          }
-          &-title{
-            font-weight: bold;
-          }
-          &-detail{
-            font-color: #d3d3d3;
-          }
-        }
-      }
-    }
   }
 }

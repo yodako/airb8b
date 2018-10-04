@@ -1,5 +1,10 @@
 class RoomsController < ApplicationController
 
+  def index
+    @rooms_world = Room.all.limit(6)
+    @rooms_ny = Room.all.limit(6)
+  end
+
   def new_introduction
   end
 
@@ -8,7 +13,7 @@ class RoomsController < ApplicationController
   end
 
   def show
-    @room = Room.find(1)
+    room = Room.find(params[:id])
   end
 
   def reservation_confirm
@@ -17,6 +22,10 @@ class RoomsController < ApplicationController
   def create
     Room.create(room_params)
     redirect_to action:new_introduction
+  end
+
+  def serch
+    @rooms = Room.all
   end
 
   private
