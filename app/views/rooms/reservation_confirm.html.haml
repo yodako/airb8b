@@ -1,5 +1,5 @@
 .confirm-view__header
-  %a{href:"#"}
+  %a{href: "#"}
     =image_tag 'airbnb-black_100129.png',class:"reservation-view_icon float-left"
 .confirm-view__body
   .confirm-view__body__reftside
@@ -39,7 +39,7 @@
       .middle-space
       .confirm-view__body__reftside__contents--heading_subtitle
         ゲスト
-      %input{type:"number"}
+      %input{type: "number"}
       .middle-space
       .confirm-view__body__reftside__contents--heading_subtitle
         ホストにひとことご挨拶を
@@ -58,7 +58,7 @@
           .confirm-view__body__reftside__contents--message_containar--body--transration 日本語に翻訳
           =image_tag 'airbnb-black_100129.png',class:"confirm-view__body__reftside__contents--message_containar--user_icon"
       .space
-      %input{type:"text",class:"confirm-view__body__reftside__contents--message_to_host",placeholder:"滞在準備の参考までに詳細をご入力ください。"}
+      %input{type: "text",class: "confirm-view__body__reftside__contents--message_to_host",placeholder: "滞在準備の参考までに詳細をご入力ください。"}
       .middle-space
       ステップ3/3
       .confirm-view__body__reftside__contents--heading_title
@@ -67,40 +67,40 @@
       .credit-card__box
         .confirm-view__body__reftside__contents--heading_subtitle.credit-card__box--head
           お支払い方法:
-        = image_tag 'creadit-card_images.png',class:"credit-card__box--images"
+        = image_tag 'creadit-card_images.png',class: "credit-card__box--images"
       .mini-space
-      %select{class:"confirm-view__body__reftside__contents--pay-select"}
-        %option{value:0} クレジットカード
-        %option{value:1} paypal
+      %select{class: "confirm-view__body__reftside__contents--pay-select"}
+        %option{value: 0} クレジットカード
+        %option{value: 1} paypal
       .space
       .confirm-view__body__reftside__contents--credit_card_box
         .confirm-view__body__reftside__contents--heading_subtitle
           名
-        %input{type:"text",class:"card_input_box",placeholder:"current_user.name"}
+        %input{type: "text",class: "card_input_box",placeholder: "current_user.name"}
       .confirm-view__body__reftside__contents--credit_card_box
         .confirm-view__body__reftside__contents--heading_subtitle
           姓
-        %input{type:"text",class:"card_input_box",placeholder:"current_user.name"}
+        %input{type: "text",class: "card_input_box",placeholder: "current_user.name"}
       .space
       .confirm-view__body__reftside__contents--card-information
         .confirm-view__body__reftside__contents--heading_subtitle
           カード情報
-      %input{type:"number",class:"card-number_input_box",placeholder:"カード番号"}
-      %input{type:"text",class:"card_input_box float-left",placeholder:"有効期限"}
-      %input{type:"text",class:"card_input_box float-left",placeholder:"CVV(セキュリティコード)"}
+      %input{type: "number",class: "card-number_input_box",placeholder: "カード番号"}
+      %input{type: "text",class: "card_input_box float-left",placeholder: "有効期限"}
+      %input{type: "text",class: "card_input_box float-left",placeholder: "CVV(セキュリティコード)"}
       .big-space
       .confirm-view__body__reftside__contents--card-information
         .confirm-view__body__reftside__contents--card-information--box
           .confirm-view__body__reftside__contents--heading_subtitle
             請求先
-          %input{type:"text",class:"card_input_box",placeholder:"有効期限"}
+          %input{type: "text",class: "card_input_box",placeholder: "有効期限"}
         .confirm-view__body__reftside__contents--card-information--box
           .confirm-view__body__reftside__contents--heading_subtitle
             お支払い口座の所在国
-          %select{class:"card_input_box",placeholder:"CVV(セキュリティコード)"}
-            %option{value:"サンプル1"} サンプル1
-            %option{value:"サンプル2"} サンプル2
-            %option{value:"サンプル3"} サンプル3
+          %select{class: "card_input_box",placeholder: "CVV(セキュリティコード)"}
+            %option{value: "サンプル1"} サンプル1
+            %option{value: "サンプル2"} サンプル2
+            %option{value: "サンプル3"} サンプル3
 
       .confirm-view__body__reftside__contents--policy
         .big-space
@@ -126,19 +126,19 @@
           .confirm-view-middle-char The World Famous Seashell House ~ Casa Caracol
           .confirm-view-small-char イスラ・ムヘーレスのまるまる貸切
           .confirm-view__body__rightside__box--content--top--review-box
-            =image_tag 'review-rate-image.png',class:"confirm-view__body__rightside__box--content--top--review-box--review-image"
+            =image_tag 'review-rate-image.png',class: "confirm-view__body__rightside__box--content--top--review-box--review-image"
             .review-count--char レビュー189件
-        =image_tag 'room2.png',class:"confirm-view__body__rightside__box--content--top--image"
+        =image_tag 'room2.png',class: "confirm-view__body__rightside__box--content--top--image"
 
       .confirm-view__body__rightside__box--content--days
         .confirm-view__body__rightside__box--content--days--box
           .confirm-view__body__rightside__box--content--days--box--guests
-            =image_tag 'guests-count-icon',class:"confirm-view__body__rightside__box--content--days--box--guests--image"
+            =image_tag 'guests-count-icon',class: "confirm-view__body__rightside__box--content--days--box--guests--image"
             .confirm-view__body__rightside__box--content--days--box--guests--count
               ゲスト3人
           %br
           .confirm-view__body__rightside__box--content--days--box--days
-            =image_tag 'guests-days-icon',class:"confirm-view__body__rightside__box--content--days--box--days--image"
+            =image_tag 'guests-days-icon',class: "confirm-view__body__rightside__box--content--days--box--days--image"
             .confirm-view__body__rightside__box--content--days--box--days--box
               .confirm-view__body__rightside__box--content--days--box--days--box--checkin
                 2018年10月17日 
@@ -176,10 +176,10 @@
           .mini-space
           .confirm-view-small-char
             予約後48時間以内に解約すれば全額返金されます。
-            %a{href:'#',class:"green_font"} 詳細はこちら
-        =image_tag 'cansel-reverse-icon.png',class:"confirm-view__body__rightside__box--content--cansel-reverse--image"
+            %a{href: '#',class: "green_font"} 詳細はこちら
+        =image_tag 'cansel-reverse-icon.png',class: "confirm-view__body__rightside__box--content--cansel-reverse--image"
 .confirm-view__footer
   .confirm-view__footer--box
-    =image_tag 'airbnb-black_100129.png',class:"confirm-view__footer--box--image"
+    =image_tag 'airbnb-black_100129.png',class: "confirm-view__footer--box--image"
     .confirm-view__footer--box--copyright
       © Airbnb, Inc.
