@@ -11,5 +11,10 @@ class AddHostIdToRooms < ActiveRecord::Migration[5.2]
     add_column :rooms, :price, :integer, null: false
     add_column :rooms, :currency, :integer, null: false
     add_column :rooms, :rule_id, :integer, foreign_key: true
+    add_column :rooms, :amenity_id, :integer, foreign_key: true
+    add_column :rooms, :filter_id, :integer, foreign_key: true
+    add_column :rooms, :address, :text
+    add_column :rooms, :latitude, :float
+    add_column :rooms, :longitude, :float
   end
 end

@@ -12,35 +12,36 @@
         = form_for @room do |f|
           .pagebody__room__basic__leftcontent--form--top--propaty_question
             掲載するのはどんなお部屋ですか？
-          .pagebody__room__basic__leftcontent--form--top--propaty_questions 
-            まずカテゴリを絞りましょう
-          .selectbox
-            %i.fa.fa-angle-down.fa-2x.selectbox--icon-angle-down
-            =f.select :kind ,[0,1,2],{},class:"selectbox--selecter"
-          .space
-          .pagebody__room__basic__leftcontent--form--top--propaty_questions
-            部屋タイプは?
-          .selectbox
-            %i.fa.fa-angle-down.fa-2x.selectbox--icon-angle-down
-            =f.select :kind ,[0,1,2],{},class:"selectbox--selecter"
-          .space
-          .pagebody__room__basic__leftcontent--form--top--propaty_question 
-            最大何人まで宿泊可能ですか?
-          定員
-          =f.number_field :kind,min:0
-          .space
-          .pagebody__room__basic__leftcontent--form--top--propaty_questions
-            ゲスト用のベッド台数は?
-          .selectbox
-            %i.fa.fa-angle-down.fa-2x.selectbox--icon-angle-down
-            =f.select :kind ,[0,1,2],{},class:"selectbox--selecter"
-          .pagebody__room__basic__leftcontent--form--top--propaty_question
-          .space
-          .pagebody__room__basic__leftcontent--form--top--propaty_question
-            バスルーム数
-          .pagebody__room__basic__leftcontent--form--top--propaty_questions
-            バスルーム数
-          =f.number_field :kind,step:"0.5",min:0
+          =f.fields_for 'filter_attributes',@room.filter do |s|
+            .pagebody__room__basic__leftcontent--form--top--propaty_questions 
+              まずカテゴリを絞りましょう
+            .selectbox
+              %i.fa.fa-angle-down.fa-2x.selectbox--icon-angle-down
+              =s.select :category ,Filter.categories.keys,{},class:"selectbox--selecter"
+            .space
+            .pagebody__room__basic__leftcontent--form--top--propaty_questions
+              部屋タイプは?
+            .selectbox
+              %i.fa.fa-angle-down.fa-2x.selectbox--icon-angle-down
+              =s.select :room_type ,Filter.room_types.keys,{},class:"selectbox--selecter"
+            .space
+            .pagebody__room__basic__leftcontent--form--top--propaty_question 
+              最大何人まで宿泊可能ですか?
+            定員
+            =s.number_field :capacity ,min:0
+            .space
+            .pagebody__room__basic__leftcontent--form--top--propaty_questions
+              ゲスト用のベッド台数は?
+            .selectbox
+              %i.fa.fa-angle-down.fa-2x.selectbox--icon-angle-down
+              =s.select :bedroom_counter ,Filter.bedroom_counters.keys,{},class:"selectbox--selecter"
+            .pagebody__room__basic__leftcontent--form--top--propaty_question
+            .space
+            .pagebody__room__basic__leftcontent--form--top--propaty_question
+              バスルーム数
+            .pagebody__room__basic__leftcontent--form--top--propaty_questions
+              バスルーム数
+            =s.number_field :bathroom_counter,step:"0.5",min:0
           .space
           .pagebody__room__basic__leftcontent--form--top--propaty_question
             所在地は?
@@ -48,66 +49,69 @@
             国/地域
           .selectbox
             %i.fa.fa-angle-down.fa-2x.selectbox--icon-angle-down
-            =f.select :kind ,[0,1,2],{},class:"selectbox--selecter"
+            =f.select :location ,Room.locations.keys,{},class:"selectbox--selecter"
           .pagebody__room__basic__leftcontent--form--top--propaty_questions
             郵便番号
-          =f.text_field :kind ,class:"adderss_box",placeholder:"123-456"
+          =f.text_field :post_number ,class:"adderss_box",placeholder:"123-456"
           .pagebody__room__basic__leftcontent--form--top--propaty_questions
             都道府県
-          =f.text_field :kind ,class:"adderss_box",placeholder:"Tokyo"
+          =f.text_field :prefecture ,class:"adderss_box",placeholder:"Tokyo"
           .pagebody__room__basic__leftcontent--form--top--propaty_questions
             市区町村
-          =f.text_field :kind ,class:"adderss_box",placeholder:"minatoku"
+          =f.text_field :city ,class:"adderss_box",placeholder:"minatoku"
           .space
           .pagebody__room__basic__leftcontent--form--top--propaty_question
             ご用意するアメニティ・設備は?
           .space
-          .propaty_question--checkboxs
-            =f.check_box :kind ,class:"propaty_question--checkboxs--box"
-            .propaty_question--checkboxs--char 必需品
-            %br
-            =f.check_box :kind ,class:"propaty_question--checkboxs--box"
-            .propaty_question--checkboxs--char テレビ
-            %br
-            =f.check_box :kind ,class:"propaty_question--checkboxs--box"
-            .propaty_question--checkboxs--char Wi-fi
-            %br
-            =f.check_box :kind ,class:"propaty_question--checkboxs--box"
-            .propaty_question--checkboxs--char シャンプー
-            %br
-            =f.check_box :kind ,class:"propaty_question--checkboxs--box"
-            .propaty_question--checkboxs--char クローゼット
-            %br
-            =f.check_box :kind ,class:"propaty_question--checkboxs--box"
-            .propaty_question--checkboxs--char エアコン
-            %br
-            =f.check_box :kind ,class:"propaty_question--checkboxs--box"
-            .propaty_question--checkboxs--char 朝食
-            %br
-            =f.check_box :kind ,class:"propaty_question--checkboxs--box"
-            .propaty_question--checkboxs--char ペット
-            %br
-            =f.check_box :kind ,class:"propaty_question--checkboxs--box"
-            .propaty_question--checkboxs--char アイコン
+          =f.fields_for 'amenity_attributes',@room.amenity do |a|
+            .propaty_question--checkboxs
+              =a.check_box :must_item ,class:"propaty_question--checkboxs--box",value:0
+              .propaty_question--checkboxs--char 必需品
+              %br
+              =a.check_box :television ,class:"propaty_question--checkboxs--box",value:0
+              .propaty_question--checkboxs--char テレビ
+              %br
+              =a.check_box :wifi ,class:"propaty_question--checkboxs--box",value:0
+              .propaty_question--checkboxs--char Wi-fi
+              %br
+              =a.check_box :shampoo ,class:"propaty_question--checkboxs--box",value:0
+              .propaty_question--checkboxs--char シャンプー
+              %br
+              =a.check_box :closet ,class:"propaty_question--checkboxs--box",value:0
+              .propaty_question--checkboxs--char クローゼット
+              %br
+              =a.check_box :heater ,class:"propaty_question--checkboxs--box",value:0
+              .propaty_question--checkboxs--char ヒーター
+              %br
+              =a.check_box :aircon ,class:"propaty_question--checkboxs--box",value:0
+              .propaty_question--checkboxs--char エアコン
+              %br
+              =a.check_box :breakfast ,class:"propaty_question--checkboxs--box",value:0
+              .propaty_question--checkboxs--char 朝食
+              %br
+              =a.check_box :pet ,class:"propaty_question--checkboxs--box",value:0
+              .propaty_question--checkboxs--char ペット
+              %br
+              =a.check_box :iron ,class:"propaty_question--checkboxs--box",value:0
+              .propaty_question--checkboxs--char アイコン
           .space
-
           .pagebody__room__basic__leftcontent--form--top--propaty_question
             お部屋の様子をゲストに紹介しよう
-          =f.label :ki do
+          =f.label :image do
             .file_field
               .file_field--button 
                 .file_field--button--font 写真をアップロード
-            =f.file_field :ki ,class:"file"
+            =f.file_field :image ,class:"file"
           .space
           .pagebody__room__basic__leftcontent--form--top--propaty_question
             説明文を編集する
           .pagebody__room__basic__leftcontent--form--top--propaty_questions
             概要
-          =f.text_field :kind ,placeholder:"インテリア、照明、近所にあるものなどを説明してください。",class:"descreption--field"
+          =f.text_field :subject ,placeholder:"インテリア、照明、近所にあるものなどを説明してください。",class:"descreption--field"
           .space
           .pagebody__room__basic__leftcontent--form--top--propaty_question
             物件に名前をつける
-          = f.text_field :kind,placeholder:"isogo,wared,yokohama",class:"listing_name-field"
+          = f.text_field :title,placeholder:"isogo,wared,yokohama",class:"listing_name-field"
           .space
           .space
           = image_tag 'registration__check.png',class:"registration__check"
@@ -115,58 +119,59 @@
           .pagebody__room__basic__leftcontent--form--top--propaty_question
             滞在中のハウスルールを設定しましょう
           .space
-          .house_rule
-            =f.label :kind do
-              .house_rule_char 
-                ペットOK
-              .house_rule_buttons
-                =f.radio_button :ki , 0
-                いいえ
-                =f.radio_button :ki , 1
-                はい
-          .house_rule
-            =f.label :kind do
-              .house_rule_char 
-                喫煙OK
-              .house_rule_buttons
-                =f.radio_button :no , 0
-                いいえ
-                =f.radio_button :no , 1
-                はい
-          .house_rule
-            =f.label :kind do
-              .house_rule_char 
-                イベント&パーティOK
-              .house_rule_buttons
-                =f.radio_button :note , 0
-                いいえ
-                =f.radio_button :note , 1
-                はい
-              .house_rule_yes-no
-          .space
-          .prior_char お家についてゲストが事前に知っておくこと
-          .space
-          =f.check_box :kind ,class:"propaty_question--checkboxs--box"
-          .prior_char--sub 階段を登らないとたどり着けません
-          %br
-          =f.check_box :kind  ,class:"propaty_question--checkboxs--box"
-          .prior_char--sub 騒音の可能性あり
-          %br
-          =f.check_box :kind ,class:"propaty_question--checkboxs--box"
-          .prior_char--sub ペットがいます
-          %br
-          =f.check_box :kind ,class:"propaty_question--checkboxs--box"
-          .prior_char--sub 敷地内に駐車場なし
-          %br
-          =f.check_box :kind ,class:"propaty_question--checkboxs--box"
-          .prior_char--sub 共用スペースあり
-          %br
-          =f.check_box :kind ,class:"propaty_question--checkboxs--box"
-          .prior_char--sub 防犯カメラ/集音マイク設置中
-          %br
-          =f.check_box :kind ,class:"propaty_question--checkboxs--box"
-          .prior_char--sub 物件内に銃刀類あり
-          %br
+          =f.fields_for 'rule_attributes', @room.rule do |b|
+            .house_rule
+              =b.label :rule_pet do
+                .house_rule_char 
+                  ペットOK
+                .house_rule_buttons
+                  =b.radio_button :rule_pet , 0
+                  いいえ
+                  =b.radio_button :rule_pet , 1
+                  はい
+            .house_rule
+              =b.label :rule_smoking do
+                .house_rule_char 
+                  喫煙OK
+                .house_rule_buttons
+                  =b.radio_button :rule_smoking , 0
+                  いいえ
+                  =b.radio_button :rule_smoking , 1
+                  はい
+            .house_rule
+              =b.label :rule_party do
+                .house_rule_char 
+                  イベント&パーティOK
+                .house_rule_buttons
+                  =b.radio_button :rule_party , 0
+                  いいえ
+                  =b.radio_button :rule_party , 1
+                  はい
+                .house_rule_yes-no
+            .space
+            .prior_char お家についてゲストが事前に知っておくこと
+            .space
+            =b.check_box :prior_stair ,class:"propaty_question--checkboxs--box"
+            .prior_char--sub 階段を登らないとたどり着けません
+            %br
+            =b.check_box :prior_noize  ,class:"propaty_question--checkboxs--box"
+            .prior_char--sub 騒音の可能性あり
+            %br
+            =b.check_box :prior_pet ,class:"propaty_question--checkboxs--box"
+            .prior_char--sub ペットがいます
+            %br
+            =b.check_box :prior_parking ,class:"propaty_question--checkboxs--box"
+            .prior_char--sub 敷地内に駐車場なし
+            %br
+            =b.check_box :prior_sharespace ,class:"propaty_question--checkboxs--box"
+            .prior_char--sub 共用スペースあり
+            %br
+            =b.check_box :prior_security ,class:"propaty_question--checkboxs--box"
+            .prior_char--sub 防犯カメラ/集音マイク設置中
+            %br
+            =b.check_box :prior_guns ,class:"propaty_question--checkboxs--box"
+            .prior_char--sub 物件内に銃刀類あり
+            %br
           .space
           .pagebody__room__basic__leftcontent--form--top--propaty_question
             お部屋の料金
@@ -174,13 +179,13 @@
           %p.smallfont
             こちらが「スマートプライジング」をOFFにした日のデフォルトの料金になります。
           .numberbox
-            =f.number_field :note,min:0, class:"numberbox--selecter"
+            =f.number_field :price,min:0, class:"numberbox--selecter"
           %p.green_font
             推奨:¥6,786
           %p 通貨
           .selectbox
             %i.fa.fa-angle-down.fa-2x.selectbox--icon-angle-down
-            =f.select :kind ,[0,1,2],{},class:"selectbox--selecter",placeholder:"JPY"
+            =f.select :currency ,Room.currencies.keys,{},class:"selectbox--selecter",placeholder:"JPY"
           .space
           .pagebody__room__basic__leftcontent--form--top--propaty_question
             以上の設定をすると,次のような流れになります
