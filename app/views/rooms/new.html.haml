@@ -17,13 +17,13 @@
               まずカテゴリを絞りましょう
             .selectbox
               %i.fa.fa-angle-down.fa-2x.selectbox--icon-angle-down
-              =s.select :category ,[0,1,2,3,4,5],{},class:"selectbox--selecter"
+              =s.select :category ,Filter.categories.keys,{},class:"selectbox--selecter"
             .space
             .pagebody__room__basic__leftcontent--form--top--propaty_questions
               部屋タイプは?
             .selectbox
               %i.fa.fa-angle-down.fa-2x.selectbox--icon-angle-down
-              =s.select :room_type ,[0,1,2],{},class:"selectbox--selecter"
+              =s.select :room_type ,Filter.room_types.keys,{},class:"selectbox--selecter"
             .space
             .pagebody__room__basic__leftcontent--form--top--propaty_question 
               最大何人まで宿泊可能ですか?
@@ -34,7 +34,7 @@
               ゲスト用のベッド台数は?
             .selectbox
               %i.fa.fa-angle-down.fa-2x.selectbox--icon-angle-down
-              =s.select :bedroom_counter ,[0,1,2,3,4,5,6,7,8],{},class:"selectbox--selecter"
+              =s.select :bedroom_counter ,Filter.bedroom_counters.keys,{},class:"selectbox--selecter"
             .pagebody__room__basic__leftcontent--form--top--propaty_question
             .space
             .pagebody__room__basic__leftcontent--form--top--propaty_question
@@ -49,7 +49,7 @@
             国/地域
           .selectbox
             %i.fa.fa-angle-down.fa-2x.selectbox--icon-angle-down
-            =f.select :location ,[0,1,2],{},class:"selectbox--selecter"
+            =f.select :location ,Room.locations.keys,{},class:"selectbox--selecter"
           .pagebody__room__basic__leftcontent--form--top--propaty_questions
             郵便番号
           =f.text_field :post_number ,class:"adderss_box",placeholder:"123-456"
@@ -185,7 +185,7 @@
           %p 通貨
           .selectbox
             %i.fa.fa-angle-down.fa-2x.selectbox--icon-angle-down
-            =f.select :currency ,[0,1,2,3,4,5,6,7,8,9,10],{},class:"selectbox--selecter",placeholder:"JPY"
+            =f.select :currency ,Room.currencies.keys,{},class:"selectbox--selecter",placeholder:"JPY"
           .space
           .pagebody__room__basic__leftcontent--form--top--propaty_question
             以上の設定をすると,次のような流れになります

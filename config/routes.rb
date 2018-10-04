@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
 
-
-  devise_for :users
+  devise_for :users, controllers: { registrations: 'registrations' }  
   root 'rooms#index'
-  get 'new_introduction' => 'rooms#new_introduction'
-  resources :rooms
+  resources :rooms do
+    collection do
+      get :reservation_confirm
+      get :new_introduction
+      get :serch_room
+    end
+  end
 end

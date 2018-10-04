@@ -1,50 +1,54 @@
+$confirm-body-width: 1120px;
+$confirm-left_side-width: 620px;
+$confirm-left_side-contents-width: 540px;
+$confirm-view-sentence-font: 16px;
 .registration-view_icon{
-  height:32px;
-  float:left;
-  margin:5px 0 0 0;
+  height: 32px;
+  float: left;
+  margin: 5px 0 0 0;
 }
 .register--font{
   &--step{
-    letter-spacing:-0.1em;
+    letter-spacing: -0.1em;
   }
   &--overview{
-    font-size:24px;
-    line-height:1.2;
+    font-size: 24px;
+    line-height: 1.2;
   }
   &--etc{
-    line-height:1.2;
+    line-height: 1.2;
   }
 }
 .button__registoration--green{
-  width:64px;
-  height:35px;
-  background:#00737c;
-  float:left;
-  border-radius:5px;
-  margin:18px 18px 0 0;
+  width: 64px;
+  height: 35px;
+  background: #00737c;
+  float: left;
+  border-radius: 5px;
+  margin: 18px 18px 0 0;
   .font{
-    text-align:center;
-    color:white;
-    margin:10px 0 0 0;
-    font-size:14px;
-    line-height:1.0;
+    text-align: center;
+    color: white;
+    margin: 10px 0 0 0;
+    font-size: 14px;
+    line-height: 1.0;
   }
 }
 .img--registration{
-  width:32%;
-  height:auto;
-  float:right;
+  width: 32%;
+  height: auto;
+  float: right;
   margin: calc(420px - 30%) 80px 0 0;
 }
 .descreption--field{
-  height:200px;
-  width:480px;
+  height: 200px;
+  width: 480px;
 }
 .listing_name-field{
-  height:60px;
-  width:480px;
-  border:1px black solid;
-  border-radius:6px;
+  height: 60px;
+  width: 480px;
+  border: 1px black solid;
+  border-radius: 6px;
   outline: none;
   background: transparent;
   background-image: none;
@@ -53,62 +57,61 @@
   appearance: none;
 }
 .prior_char{
-  font-weight:bold;
-  color:#666666;
+  font-weight: bold;
+  color: #666666;
   &--sub{
-    font-weight:bold;
-    color:#666666;
-    margin:0 0 0 20px;
+    font-weight: bold;
+    color: #666666;
+    margin: 0 0 0 20px;
   }
 }
 .house_rule{
-  height:50px;
-  width:400px;
+  height: 50px;
+  width: 400px;
   &_char{
-    float:left;
-    font-size:20px;
-    color:#444444;
+    float: left;
+    font-size: 20px;
+    color: #444444;
   }
   &_buttons{
-    float:right;
-    margin:0 20px 0 0;
+    float: right;
+    margin: 0 20px 0 0;
   }
 }
 .space{
-  height:20px;
-  width:100vw;
+  height: 20px;
 }
 .registration__check{
-  width:520px;
+  width: 520px;
 }
 .smallfont{
-  font-size:14.6px;
+  font-size: 14.6px;
 }
 .green_font{
-  color:green;
+  color: green;
 }
 .registration__icons--type1{
-  height:140px;
+  height: 140px;
 }
 .registration__icons--type2{
-  width:180px;
+  width: 180px;
 }
 .registration__icons--type3{
-  width:160px;
+  width: 160px;
 }
 .selectbox{
-  border:1px solid #DCDCDC;
-  width:300px;
-  height:40px;
-  border-radius:4px;
+  border: 1px solid #DCDCDC;
+  width: 300px;
+  height: 40px;
+  border-radius: 4px;
   &--icon-angle-down{
-    color:gray;
-    float:right;
-    margin:4px 10px 0 0;
+    color: gray;
+    float: right;
+    margin: 4px 10px 0 0;
   }
   &--selecter{
-    width:250px;
-    height:40px;
+    width: 250px;
+    height: 40px;
     border: none;
     outline: none;
     background: transparent;
@@ -116,74 +119,128 @@
     box-shadow: none;
     -webkit-appearance: none;
     appearance: none;
-    margin:0 0 0 10px;
+    margin: 0 0 0 10px;
   }
 }
 .adderss_box{
-  height:50px;
-  width:200px;
+  height: 50px;
+  width: 200px;
   outline: none;
   background: transparent;
-  border:1px #DCDCDC solid;
+  border: 1px #DCDCDC solid;
 }
 
 .num{
-  width:400px;
-  height:20px;
+  width: 400px;
+  height: 20px;
 }
 .type_select{
-  margin:14px 0 0 0;
-  width:300px;
-  height:40px;
-  border:1px green solid;
+  margin: 14px 0 0 0;
+  width: 300px;
+  height: 40px;
+  border: 1px green solid;
 }
 .propaty_question--checkboxs{
-  width:150px;
+  width: 150px;
   &--box{
-    float:left;
-    margin:4px 0 0 0;
+    float: left;
+    margin: 4px 0 0 0;
   }
   &--char{
-    color:gray;
-    margin:0 0 0 20px;
+    color: gray;
+    margin: 0 0 0 20px;
   }
 }
 .file{
-  display:none;
+  display: none;
 }
 .file_field{
-  width:500px;
-  height:300px;
-  border:3px $light-gray dashed;
-  border-radius:3px;
+  width: 500px;
+  height: 300px;
+  border: 3px $light-gray dashed;
+  border-radius: 3px;
   &--button{
-    height:66px;
-    width:250px;
-    background:#ff5d64;
-    margin:125px auto 0;
-    border-radius:6px;
+    height: 66px;
+    width: 250px;
+    background: #ff5d64;
+    margin: 125px auto 0;
+    border-radius: 6px;
     &--font{
-      color:white;
-      font-weight:bold;
-      text-align:center;
-      line-height:4;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      line-height: 4;
     }
   }
 }
 .numberbox{
-  border:1px solid #DCDCDC;
-  width:500px;
-  height:40px;
-  border-radius:4px;
+  border: 1px solid #DCDCDC;
+  width: 500px;
+  height: 40px;
+  border-radius: 4px;
   &--selecter{
-    width:500px;
-    height:40px;
+    width: 500px;
+    height: 40px;
     border: none;
     outline: none;
     background: transparent;
     background-image: none;
     box-shadow: none;
     -webkit-appearance: none;
-    margin:0 0 0 10px;
+    margin: 0 0 0 10px;
+  }
+}
+
+.middle-space{
+  height: 40px;
+}
+.mini-space{
+  height: 10px;
+}
+.big-space{
+  height: 80px;
+}
+.border--light_gray{
+  width: $confirm-left_side-contents-width;
+  border-bottom: solid 1px $light-gray;
+}
+.card-number_input_box{
+  height: 40px;
+  width: 440px;
+  outline: none;
+  background: transparent;
+  border: 1px #DCDCDC solid;
+}
+.card_input_box{
+  height: 40px;
+  width: 220px;
+  outline: none;
+  background: transparent;
+  border: 1px #DCDCDC solid;
+}
+.float-left{
+  float: left;
+}
+.reservation-view_icon{
+  margin: 10px 0 0 10px;
+}
+.review-count--char{
+  font-size: 10px;
+  font-weight: bold;
+}
+.confirm-view-middle-char{
+  font-weight: bold;
+}
+.confirm-view-small-char{
+  font-size: 12px;
+}
+.credit-card__box{
+  &--head{
+    float: left;
+  }
+  &--images{
+    margin: 0 0 0 190px;
+    width: 180px;
+    float: left;
   }
 }
