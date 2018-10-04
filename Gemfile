@@ -68,5 +68,7 @@ gem 'font-awesome-rails'
 gem 'devise'
 gem 'gmaps4rails'
 gem 'geocoder'
-
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'enum_help'
 
