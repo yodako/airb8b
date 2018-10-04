@@ -3,9 +3,11 @@
     世界中のリスティング
 
 .rooms
-  = render "listing-thumb"
-  = render "listing-thumb"
-  = render "listing-thumb"
-  = render "listing-thumb"
+  - @rooms_world.each do |room|
+    = render partial: 'listing-thumb', locals: {room: room}
+
+
+
+
 
 
