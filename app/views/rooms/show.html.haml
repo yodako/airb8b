@@ -81,7 +81,23 @@
             .show-content__main-body__left-content-area-body-action
               このエリア情報の続きを読む
           .show-content__main-body__left-content-area-map
-            %img.map-image{src: "/assets/map.png"}
+            / %img.map-image{src: "/assets/map.png"}
+            #map{:style => "width: 650px; height: 300px;"}
+              :javascript
+                handler = Gmaps.build('Google');
+                handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+                  markers = handler.addMarkers([
+                    {
+                      "lat": #{@room.latitude},
+                      "lng": #{@room.longitude},
+                      "infowindow": "ここだよーん"
+                    }
+                  ]);
+                  handler.bounds.extendWith(markers);
+                  handler.fitMapToBounds();
+                  handler.getMap().setZoom(16);
+                });
+
             %p 詳しい所在地はご予約時にお知らせします。
         .show-content__main-body__left-content-rule
           ポリシー

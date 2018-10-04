@@ -8,6 +8,7 @@ class RoomsController < ApplicationController
   end
 
   def show
+    @room = Room.find(1)
   end
 
   def create
