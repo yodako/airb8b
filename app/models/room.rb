@@ -8,6 +8,7 @@ class Room < ApplicationRecord
   accepts_nested_attributes_for :rule
   accepts_nested_attributes_for :filter
 
+
   mount_uploader :image, ImageUploader
 
   enum location: %w(アフガニスタン ニューヨーク インドネシア オーストラリア オランダ 象牙海岸 東京 マカオ 中国 ジャマイカ カザフスタン ヨルダン ハンガリー リビア バルバドス ベルギー ボリビア )
