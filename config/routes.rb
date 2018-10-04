@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     collection do
       get :reservation_confirm
       get :new_introduction
-      get :serch_room
+      get :serch
     end
   end
 end
