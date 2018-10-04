@@ -10,6 +10,9 @@ class RoomsController < ApplicationController
   def show
   end
 
+  def reservation_confirm
+  end
+
   def create
     #親要素のDBにデータを保存するロジック。viewでfields_forとmodelにaccept_nested_attribute_forを定義
     room    = Room.create(room_params)
