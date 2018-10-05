@@ -1,19 +1,19 @@
-.pageheader__room_new
-  .pageheader__room_new--top
-    .pageheader__room_new--top--icon
-      %a{href:"#"}
-        =image_tag 'registration_new.png',class:"registration-view_icon"
-    .pageheader__room_new--top--user_icon
-      =image_tag 'registration_new.png',class:"registration-view_icon"
+-# .pageheader__room_new
+-#   .pageheader__room_new--top
+-#     .pageheader__room_new--top--icon
+-#       %a{href:"#"}
+-#         =image_tag 'registration_new.png',class:"registration-view_icon"
+-#     .pageheader__room_new--top--user_icon
+-#       =image_tag 'registration_new.png',class:"registration-view_icon"
 .pagebody__room__basic
   .pagebody__room__basic__leftcontent
     .pagebody__room__basic__leftcontent--form
-      .pagebody__room__basic__leftcontent--form--top 
+      .pagebody__room__basic__leftcontent--form--top
         = form_for @room do |f|
           .pagebody__room__basic__leftcontent--form--top--propaty_question
             掲載するのはどんなお部屋ですか？
           =f.fields_for 'filter_attributes',@room.filter do |s|
-            .pagebody__room__basic__leftcontent--form--top--propaty_questions 
+            .pagebody__room__basic__leftcontent--form--top--propaty_questions
               まずカテゴリを絞りましょう
             .selectbox
               %i.fa.fa-angle-down.fa-2x.selectbox--icon-angle-down
@@ -25,7 +25,7 @@
               %i.fa.fa-angle-down.fa-2x.selectbox--icon-angle-down
               =s.select :room_type ,Filter.room_types.keys,{},class:"selectbox--selecter"
             .space
-            .pagebody__room__basic__leftcontent--form--top--propaty_question 
+            .pagebody__room__basic__leftcontent--form--top--propaty_question
               最大何人まで宿泊可能ですか?
             定員
             =s.number_field :capacity ,min:0
@@ -99,7 +99,7 @@
             お部屋の様子をゲストに紹介しよう
           =f.label :image do
             .file_field
-              .file_field--button 
+              .file_field--button
                 .file_field--button--font 写真をアップロード
             =f.file_field :image ,class:"file"
           .space
@@ -122,7 +122,7 @@
           =f.fields_for 'rule_attributes', @room.rule do |b|
             .house_rule
               =b.label :rule_pet do
-                .house_rule_char 
+                .house_rule_char
                   ペットOK
                 .house_rule_buttons
                   =b.radio_button :rule_pet , 0
@@ -131,7 +131,7 @@
                   はい
             .house_rule
               =b.label :rule_smoking do
-                .house_rule_char 
+                .house_rule_char
                   喫煙OK
                 .house_rule_buttons
                   =b.radio_button :rule_smoking , 0
@@ -140,7 +140,7 @@
                   はい
             .house_rule
               =b.label :rule_party do
-                .house_rule_char 
+                .house_rule_char
                   イベント&パーティOK
                 .house_rule_buttons
                   =b.radio_button :rule_party , 0
@@ -212,6 +212,6 @@
           = f.submit value:"完了",class:"pagebody__room__basic__leftcontent--form--bottom--next font"
         .pagebody__room__basic__leftcontent--form--bottom
           %a{href:"#"}
-            .pagebody__room__basic__leftcontent--form--bottom--return 
+            .pagebody__room__basic__leftcontent--form--bottom--return
               .font 戻る
-              
+
