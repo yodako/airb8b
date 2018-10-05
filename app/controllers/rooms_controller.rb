@@ -33,7 +33,7 @@ class RoomsController < ApplicationController
   end
 
   def serch
-    @rooms = Room.all
+    @rooms = Room.where(city: "Tokyo")
   end
 
   private
