@@ -10,7 +10,7 @@ class AddFirstNameToUser < ActiveRecord::Migration[5.2]
     add_column :users, :currency, :integer
     add_column :users, :address, :string
     add_column :users, :introduction, :string
-    add_column :users, :guest_id, :integer, null: false
+    add_column :users, :guest_id, :integer
     add_column :users, :host_id, :integer
   end
 end

@@ -1,0 +1,204 @@
+= form_for [@room,@reservation] do |f|
+  .confirm-view__header
+    %a{href: "#"}
+      =image_tag 'airbnb-black_100129.png',class:"reservation-view_icon float-left"
+  .confirm-view__body
+    .confirm-view__body__reftside
+      .confirm-view__body__reftside__contents
+        .space
+        ステップ1/3
+        .confirm-view__body__reftside__contents--heading_title
+          旅行の詳細を見る
+        .middle-space
+        .confirm-view__body__reftside__contents--heading_subtitle
+          旅行のハイライト
+        %ul.confirm-view__body__reftside__contents--heading__lists
+          %li.confirm-view__body__reftside__contents--heading__lists__list このリスティングは、ナイトライフ、グルメ、ショッピング、交通の便がとても良いで有名なウィリアムズバーグ (Williamsburg)エリアにあります。
+          %li.confirm-view__body__reftside__contents--heading__lists__list このリスティングは、ナイトライフ、グルメ、ショッピング、交通の便がとても良いで有名なウィリアムズバーグ (Williamsburg)エリアにあります。
+          %li.confirm-view__body__reftside__contents--heading__lists__list このリスティングは、ナイトライフ、グルメ、ショッピング、交通の便がとても良いで有名なウィリアムズバーグ (Williamsburg)エリアにあります。
+        .space
+        .border--light_gray
+        .middle-space
+        .confirm-view__body__reftside__contents--heading_subtitle
+          注目すべきポイント
+        .confirm-view__body__reftside__contents--heading_sentence
+          子ども（0～12歳）OK
+        .mini-space
+        .border--light_gray
+        .mini-space
+        .confirm-view__body__reftside__contents--heading_sentence
+          禁煙. ペットお断り. パーティー&イベントお断り.
+        .mini-space
+        .border--light_gray
+        .mini-space
+        .confirm-view__body__reftside__contents--heading_sentence
+          禁煙. ペットお断り. パーティー&イベントお断り.
+        .middle-space
+        ステップ2/3
+        .confirm-view__body__reftside__contents--heading_title
+          お連れの方は?
+        .middle-space
+        .confirm-view__body__reftside__contents--heading_subtitle
+          ゲスト
+        %input{type: "number"}
+        .middle-space
+        .confirm-view__body__reftside__contents--heading_subtitle
+          ホストにひとことご挨拶を
+        .mini-space
+        .confirm-view__body__reftside__contents--heading_sentence
+          Mariaさんに簡単に自己紹介をして旅の目的を伝えましょう。
+        .space
+        .confirm-view__body__reftside__contents--message_containar
+          .confirm-view__body__reftside__contents--message_containar--body
+            .confirm-view__body__reftside__contents--message_containar--body--text 
+              %p Thank you for considering staying in my large, private, cozy, elegant, 
+              %p extremely well equiped and located place. 
+              %p Do not instant book if this is for a photo/film shoot or event! 
+              %p Yours truly, 
+              %p Maria
+            .confirm-view__body__reftside__contents--message_containar--body--transration 日本語に翻訳
+            =image_tag 'airbnb-black_100129.png',class:"confirm-view__body__reftside__contents--message_containar--user_icon"
+        .space
+        %input{type: "text",class: "confirm-view__body__reftside__contents--message_to_host",placeholder: "滞在準備の参考までに詳細をご入力ください。"}
+        .middle-space
+        ステップ3/3
+        .confirm-view__body__reftside__contents--heading_title
+          確認して支払う
+        .middle-space
+        .credit-card__box
+          .confirm-view__body__reftside__contents--heading_subtitle.credit-card__box--head
+            お支払い方法:
+          = image_tag 'creadit-card_images.png',class: "credit-card__box--images"
+        .mini-space
+        %select{class: "confirm-view__body__reftside__contents--pay-select"}
+          %option{value: 0} クレジットカード
+          %option{value: 1} paypal
+        .space
+        .confirm-view__body__reftside__contents--credit_card_box
+          .confirm-view__body__reftside__contents--heading_subtitle
+            名
+          %input{type: "text",class: "card_input_box",placeholder: "current_user.name"}
+        .confirm-view__body__reftside__contents--credit_card_box
+          .confirm-view__body__reftside__contents--heading_subtitle
+            姓
+          %input{type: "text",class: "card_input_box",placeholder: "current_user.name"}
+        .space
+        .confirm-view__body__reftside__contents--card-information
+          .confirm-view__body__reftside__contents--heading_subtitle
+            カード情報
+        %input{type: "number",class: "card-number_input_box",placeholder: "カード番号"}
+        %input{type: "text",class: "card_input_box float-left",placeholder: "有効期限"}
+        %input{type: "text",class: "card_input_box float-left",placeholder: "CVV(セキュリティコード)"}
+        .big-space
+        .confirm-view__body__reftside__contents--card-information
+          .confirm-view__body__reftside__contents--card-information--box
+            .confirm-view__body__reftside__contents--heading_subtitle
+              請求先
+            %input{type: "text",class: "card_input_box",placeholder: "有効期限"}
+          .confirm-view__body__reftside__contents--card-information--box
+            .confirm-view__body__reftside__contents--heading_subtitle
+              お支払い口座の所在国
+            %select{class: "card_input_box",placeholder: "CVV(セキュリティコード)"}
+              %option{value: "サンプル1"} サンプル1
+              %option{value: "サンプル2"} サンプル2
+              %option{value: "サンプル3"} サンプル3
+
+        .confirm-view__body__reftside__contents--policy
+          .big-space
+          .confirm-view__body__reftside__contents--heading_subtitle
+            キャンセルポリシー: 厳格
+          .bigspace
+          .confirm-view__body__reftside__contents--heading_sentence
+            .space
+            予約後48時間以内かつチェックイン14日前までに解約すれば、全額返金されます。チェックイン7日前までに解約すれば、サービス料を除き50%が返金されます。その後の解約では、宿泊料金は返金不可となります。
+          .big-space
+          .confirm-view__body__reftside__contents--heading_sentence
+            私は、
+            %span.green_font ハウスルール
+            , 
+            %span.green_font キャンセルポリシー
+            ,および
+            %span.green_font ゲスト返金ポリシー
+            に同意します。併せて、サービス料を含む表示金額の全額を払うことに同意します。
+    .confirm-view__body__rightside
+      .confirm-view__body__rightside__box
+        .confirm-view__body__rightside__box--content
+          .confirm-view__body__rightside__box--content--top
+            .confirm-view-middle-char The World Famous Seashell House ~ Casa Caracol
+            .confirm-view-small-char イスラ・ムヘーレスのまるまる貸切
+            .confirm-view__body__rightside__box--content--top--review-box
+              =image_tag 'review-rate-image.png',class: "confirm-view__body__rightside__box--content--top--review-box--review-image"
+              .review-count--char レビュー189件
+          =image_tag 'room2.png',class: "confirm-view__body__rightside__box--content--top--image"
+
+        .confirm-view__body__rightside__box--content--days
+          .confirm-view__body__rightside__box--content--days--box
+            .confirm-view__body__rightside__box--content--days--box--guests
+              =image_tag 'guests-count-icon',class: "confirm-view__body__rightside__box--content--days--box--guests--image"
+              .confirm-view__body__rightside__box--content--days--box--guests--count
+                ゲスト
+              .confirm-view__body__rightside__box--content--days--box--guests--count
+                = @reservation.occupancy
+                =f.hidden_field :occupancy
+              .confirm-view__body__rightside__box--content--days--box--guests--count
+                人
+            %br
+            .confirm-view__body__rightside__box--content--days--box--days
+              =image_tag 'guests-days-icon',class: "confirm-view__body__rightside__box--content--days--box--days--image"
+              .confirm-view__body__rightside__box--content--days--box--days--box
+                .confirm-view__body__rightside__box--content--days--box--days--box--checkin
+                  =@reservation.check_in
+                  =f.hidden_field :check_in
+                .confirm-view__body__rightside__box--content--days--box--days--box--arrow
+                  → 
+                .confirm-view__body__rightside__box--content--days--box--days--box--checkout
+                  2018年10月19日
+                  =f.hidden_field :check_out
+              
+        .confirm-view__body__rightside__box--content--cal
+          .space
+          .confirm-view__body__rightside__box--content--cal--box
+            .confirm-view__body__rightside__box--content--cal--box--multi
+              ¥
+            .confirm-view__body__rightside__box--content--cal--box--multi
+              =@room.price
+              = f.hidden_field :check_in
+            .confirm-view__body__rightside__box--content--cal--box--multi
+              × 
+            .confirm-view__body__rightside__box--content--cal--box--multi
+              = @reservation.check_out - @reservation.check_in
+            .confirm-view__body__rightside__box--content--cal--box--multi
+              泊  
+            .confirm-view__body__rightside__box--content--cal--box--comp
+              ¥
+            .confirm-view__body__rightside__box--content--cal--box--comp
+              = @room.price * 2
+          .confirm-view__body__rightside__box--content--cal--box
+          .space
+            .confirm-view__body__rightside__box--content--cal--box--option
+              清掃料
+            .confirm-view__body__rightside__box--content--cal--box--price
+              ¥ 10,075
+        .space
+        .confirm-view__body__rightside__box--content--sum--box
+          .confirm-view__body__rightside__box--content--sum--box--head
+            合計額(JPY)
+          .confirm-view__body__rightside__box--content--sum--box--price
+            ¥ 78,107
+        .space
+        .confirm-view__body__rightside__box--content--cansel-reverse
+          .confirm-view__body__rightside__box--content--cansel-reverse--box
+            .confirm-view-middle-char
+              厳格 (返金保証期間付き) - キャンセル無料
+            .mini-space
+            .confirm-view-small-char
+              予約後48時間以内に解約すれば全額返金されます。
+              %a{href: '#',class: "green_font"} 詳細はこちら
+          =image_tag 'cansel-reverse-icon.png',class: "confirm-view__body__rightside__box--content--cansel-reverse--image"
+  .confirm-view__footer
+    .confirm-view__footer--box
+      =image_tag 'airbnb-black_100129.png',class: "confirm-view__footer--box--image"
+      .confirm-view__footer--box--copyright
+        © Airbnb, Inc.
+        = @room.id
+  =f.submit

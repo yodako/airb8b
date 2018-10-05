@@ -2,7 +2,7 @@ class RoomsController < ApplicationController
 
   def index
     @rooms_world = Room.all.limit(6)
-    @rooms_ny = Room.all.limit(6)
+    @rooms_ny = Room.where(city: "NewYork").limit(6)
   end
 
   def new_introduction
@@ -14,6 +14,7 @@ class RoomsController < ApplicationController
 
   def show
     @room = Room.find(params[:id])
+    @reservation = Reservation.new
   end
 
   def reservation_confirm
@@ -33,7 +34,7 @@ class RoomsController < ApplicationController
   end
 
   def serch
-    @rooms = Room.all
+    @rooms = Room.where(city: "Tokyo")
   end
 
   private
