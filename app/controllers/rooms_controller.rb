@@ -34,7 +34,7 @@ class RoomsController < ApplicationController
   end
 
   def serch
-    @rooms = Room.where(city: "Tokyo")
+    @rooms = Room.where(city: params[:city])
   end
 
   private
