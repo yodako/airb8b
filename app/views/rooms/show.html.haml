@@ -121,8 +121,8 @@
                 handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
                   markers = handler.addMarkers([
                     {
-                      "lat": 35.2228,
-                      "lng": 138.682,
+                      "lat": #{@room.latitude},
+                      "lng": #{@room.longitude},
                       "infowindow": "ここだよーん"
                     }
 
