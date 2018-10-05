@@ -77,9 +77,6 @@ ActiveRecord::Schema.define(version: 2018_09_30_070725) do
     t.integer "rule_id"
     t.integer "amenity_id"
     t.integer "filter_id"
-    t.text "address"
-    t.float "latitude"
-    t.float "longitude"
   end
 
   create_table "rules", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -121,4 +118,6 @@ ActiveRecord::Schema.define(version: 2018_09_30_070725) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "reservations", "rooms"
+  add_foreign_key "reservations", "users"
 end
