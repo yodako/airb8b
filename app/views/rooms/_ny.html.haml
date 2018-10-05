@@ -1,0 +1,7 @@
+.contents-world__title.clearfix
+  %h2
+    ニューヨークのお家
+
+.rooms
+  - @rooms_ny.each do |room|
+    = render partial: 'listing-thumb', locals: {room: room}

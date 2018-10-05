@@ -1,26 +1,3 @@
-%header
-  -# .header-logo
-  -#   = link_to image_tag "logo.png", class: "logo"
-  .search
-    .fas.fa-search
-    %input{class: ""}
-  .nav
-    %ul
-      %li.block
-        = link_to "ホストをはじめる"
-      %li.block
-        = link_to "お気に入り"
-      %li.block
-        = link_to "旅行"
-      %li.block
-        = link_to "メッセージ"
-      %li.block
-        = link_to "ヘルプ"
-      %li.block
-        = link_to "User"
-
-
-
 .warapper
   .side.search__boxs
     %h3 MORE FILTER
@@ -69,7 +46,7 @@
   .main
     .rooms.container
       .sub
-        %h3 xx件以上のお家
+        %h3 100件以上のお家
       .rooms
         - @rooms.each do |room|
           = render partial: 'listing-thumb', locals: {room: room}
