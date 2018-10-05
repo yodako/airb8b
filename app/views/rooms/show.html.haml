@@ -2,7 +2,7 @@
   .show-content__header
   .show-content__main
     .show-content__main-top
-      %img.top-image{src: "https://a0.muscache.com/im/pictures/cb0d0c92-a1fd-43ab-99f8-02f886666c4d.jpg?aki_policy=xx_large"}/
+      %img.top-image{src: "#{@room.image.url}"}/
       %button.share シェアする
       %button.keep 保存する
       %button.display 写真を表示する
@@ -44,8 +44,8 @@
         .show-content__main-body__left-content-amenities
           %h3.title アメニティ・設備
           .show-content__main-body__left-content-amenities-items
-            -if @room.amenity.wifi
-              = @room.amenity.wifi
+            -if @room.amenity.wifi == 1
+              %p wifi
             -if @room.amenity.shampoo
               = @room.amenity.shampoo
             -if @room.amenity.closet
@@ -121,10 +121,11 @@
                 handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
                   markers = handler.addMarkers([
                     {
-                      "lat": #{@room.latitude},
-                      "lng": #{@room.longitude},
+                      "lat": 35.2228,
+                      "lng": 138.682,
                       "infowindow": "ここだよーん"
                     }
+
                   ]);
                   handler.bounds.extendWith(markers);
                   handler.fitMapToBounds();
@@ -160,7 +161,7 @@
             されます。
           .show-content__main-body__left-content-cancel-action
             ポリシーをさらに読む
-
+  = form_for [@room,@reservation] ,url: reservation_confirm_room_reservations_path(@room) do |f|
     .show-content__main-body__right-content
       .show-content__main-body__right-content-tool
         .show-content__main-body__right-content-tool-price
@@ -171,19 +172,20 @@
           </b>
         .show-content__main-body__right-content-tool-date
           日付
-        %input{name: "日付", type: "date", value: ""}
-        %input{name: "日付", type: "date", value: ""}
+        =f.date_field :check_in
+        =f.date_field :check_out
         .show-content__main-body__right-content-tool-number 人数
-        %input{name: "人数", placeholder: "ゲスト2人", value: ""}
+        =f.number_field :occupancy ,placeholder: "ゲスト２人"
         .show-content__main-body__right-content-tool-caution
           その日程では予約できません
-        %button.check 空室状況をチェック
-
+        =f.submit class:"check" ,value:"空室状況をチェック"
     .show-content__main-body__bottom-content
       .show-content__main-body__bottom-content-title
       .show-content__main-body__bottom-content-list
       .show-content__main-body__bottom-content-
   .show-content__footer
+
+    
 
 
 
