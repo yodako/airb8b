@@ -4,9 +4,15 @@ Rails.application.routes.draw do
   root 'rooms#index'
   resources :rooms do
     collection do
-      get :reservation_confirm
       get :new_introduction
       get :serch
+      get :reservation_confirm
+    end
+    resources :reservations do
+      collection do
+        post :reservation_confirm
+      end
     end
   end
+  
 end
