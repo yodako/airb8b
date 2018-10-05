@@ -161,7 +161,7 @@
             されます。
           .show-content__main-body__left-content-cancel-action
             ポリシーをさらに読む
-
+  = form_for [@room,@reservation] ,url: reservation_confirm_room_reservations_path(@room) do |f|
     .show-content__main-body__right-content
       .show-content__main-body__right-content-tool
         .show-content__main-body__right-content-tool-price
@@ -172,19 +172,20 @@
           </b>
         .show-content__main-body__right-content-tool-date
           日付
-        %input{name: "日付", type: "date", value: ""}
-        %input{name: "日付", type: "date", value: ""}
+        =f.date_field :check_in
+        =f.date_field :check_out
         .show-content__main-body__right-content-tool-number 人数
-        %input{name: "人数", placeholder: "ゲスト2人", value: ""}
+        =f.number_field :occupancy ,placeholder: "ゲスト２人"
         .show-content__main-body__right-content-tool-caution
           その日程では予約できません
-        %button.check 空室状況をチェック
-
+        =f.submit class:"check" ,value:"空室状況をチェック"
     .show-content__main-body__bottom-content
       .show-content__main-body__bottom-content-title
       .show-content__main-body__bottom-content-list
       .show-content__main-body__bottom-content-
   .show-content__footer
+
+    
 
 
 
