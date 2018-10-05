@@ -9,9 +9,8 @@
         #{room.title}
       .room__detail-detail
         1泊あたり料金
-        ¥ #{room.price}
+        ¥
+        = number_with_delimiter("#{room.price}")
+        キャンセル無料
       .room__detail-evaluation
         ★★★ 222 ・スーパーホスト
-
-
-
