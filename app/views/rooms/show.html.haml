@@ -2,7 +2,7 @@
   .show-content__header
   .show-content__main
     .show-content__main-top
-      %img.top-image{src: "https://a0.muscache.com/im/pictures/cb0d0c92-a1fd-43ab-99f8-02f886666c4d.jpg?aki_policy=xx_large"}/
+      %img.top-image{src: "#{@room.image.url}"}/
       %button.share シェアする
       %button.keep 保存する
       %button.display 写真を表示する
@@ -125,7 +125,7 @@
                       "lng": 138.682,
                       "infowindow": "ここだよーん"
                     }
-                    
+
                   ]);
                   handler.bounds.extendWith(markers);
                   handler.fitMapToBounds();
