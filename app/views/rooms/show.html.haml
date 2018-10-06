@@ -11,14 +11,11 @@
       .show-content__main-body__left-content
         .show-content__main-body__left-content-top
           .show-content__main-body__left-content-top__title
-            / マンション・アパート貸切
           = @room.filter.category
           %img.icon-image{src: "https://a0.muscache.com/im/pictures/73411d20-f2e0-4b59-b5c2-e77857e7eeae.jpg?aki_policy=profile_x_medium"}
           .show-content__main-body__left-content-top__main
-            / ★Shinjuku-Area★New Open★Free WIFI★Designer`S Room★
           = @room.title
           .show-content__main-body__left-content-top__area
-            / Shinjuku-ku
           = @room.city
           .show-content__main-body__left-content-top__condition
             ゲスト
@@ -37,31 +34,28 @@
           .show-content__main-body__left-content-point__action
             役に立った  · 役に立たなかった
         .show-content__main-body__left-content-deteil
-          / お部屋は四ﾂ谷駅から徒歩5分､四谷三丁目駅から徒歩3分のところにあり､周りは地元の人から愛され続けている老舗やお寺なども多く､皇居にも近いので最高の立地です!
-          / 新宿御苑にも簡単にいけますので､ゆっくり散歩や､皇居の周りをｼﾞｮｷﾞﾝｸﾞするのも最高です!
-          / お部屋にはｾﾐﾀﾞﾌﾞﾙﾍﾞｯﾄﾞが2つ､ｼﾝｸﾞﾙｿﾌｧｰﾍﾞｯﾄ1つありますので､最大で5名様まで宿泊可能です｡
           = @room.subject
         .show-content__main-body__left-content-amenities
           %h3.title アメニティ・設備
           .show-content__main-body__left-content-amenities-items
             -if @room.amenity.wifi == 1
               %p wifi
-            -if @room.amenity.shampoo
-              = @room.amenity.shampoo
-            -if @room.amenity.closet
-              = @room.amenity.closet
-            -if @room.amenity.television
-              = @room.amenity.television
-            -if @room.amenity.heater
-              = @room.amenity.heater
-            -if @room.amenity.aircon
-              = @room.amenity.aircon
-            -if @room.amenity.breakfast
-              = @room.amenity.breakfast
-            -if @room.amenity.pet
-              = @room.amenity.pet
-            -if @room.amenity.iron
-              = @room.amenity.iron
+            -if @room.amenity.shampoo == 1
+              %p シャンプー
+            -if @room.amenity.closet == 1
+              %p クローゼット
+            -if @room.amenity.television == 1
+              %p テレビ
+            -if @room.amenity.heater == 1
+              %p ヒーター
+            -if @room.amenity.aircon == 1
+              %p エアコン
+            -if @room.amenity.breakfast == 1
+              %p 朝食
+            -if @room.amenity.pet == 1
+              %p ペット
+            -if @room.amenity.iron == 1
+              %p アイロン
         .show-content__main-body__left-content-bed
           ベッドのタイプ
           .show-content__main-body__left-content-bed-left
@@ -114,15 +108,14 @@
             .show-content__main-body__left-content-area-body-action
               このエリア情報の続きを読む
           .show-content__main-body__left-content-area-map
-            / %img.map-image{src: "/assets/map.png"}
             #map{:style => "width: 650px; height: 300px;"}
               :javascript
                 handler = Gmaps.build('Google');
                 handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
                   markers = handler.addMarkers([
                     {
-                      "lat": 35.2228,
-                      "lng": 138.682,
+                      "lat": #{@room.latitude},
+                      "lng": #{@room.longitude},
                       "infowindow": "ここだよーん"
                     }
 
@@ -138,15 +131,26 @@
           .show-content__main-body__left-content-rule-title
             ハウスルール
           .show-content__main-body__left-content-rule-body
-            / 禁煙
-            -if @room.rule.rule_smoking
-              = @room.rule.rule_smoking
-            / ペットお断り
-            -if @room.rule.rule_pet
-              = @room.rule.rule_pet
-            / パーティー&イベントお断り
-            -if @room.rule.rule_party
-              = @room.rule.rule_party
+            -if @room.rule.rule_smoking == 1
+              %p 禁煙
+            -if @room.rule.rule_pet == 1
+              %p ペットお断り
+            -if @room.rule.rule_party == 1
+              %p パーティー&イベントお断り
+            -if @room.rule.prior_stair == 1
+              %p 階段を登らないとたどり着けません
+            -if @room.rule.prior_noize == 1
+              %p 騒音の可能性あり
+            -if @room.rule.prior_pet == 1
+              %p ペットがいます
+            -if @room.rule.prior_parking == 1
+              %p 敷地内に駐車場なし
+            -if @room.rule.prior_sharespace == 1
+              %p 共有スペースあり
+            -if @room.rule.prior_security == 1
+              %p 防犯カメラ/集音マイク設置中
+            -if @room.rule.prior_guns == 1
+              %p 物件内に銃刀類あり
             チェックインは16:00から
             11:00までにチェックアウト
             セルフチェックイン（キーボックス）

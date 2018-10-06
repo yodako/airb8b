@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :rooms do
     collection do
       get :new_introduction
-      get :serch
+      post :serch
       get :reservation_confirm
     end
     resources :reservations do
